@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
-import { Footer } from '@/components/Footer'
+import { Footer } from '@/components/footer'
 
 const meta = {
 	title: "Page Elements/Footer",
