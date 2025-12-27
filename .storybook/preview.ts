@@ -1,7 +1,15 @@
 import type { Preview } from '@storybook/nextjs-vite'
 
+import "../src/app/globals.css"
+
 const preview: Preview = {
   parameters: {
+    backgrounds: {
+      options: {
+        dark: { name: 'dark', value: '#000000' },
+        light: { name: 'light', value: '#ffffff' },
+      }
+    },
     controls: {
       matchers: {
        color: /(background|color)$/i,
@@ -15,6 +23,9 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: 'todo'
     }
+  },
+  initialGlobals: {
+    backgrounds: { value: 'dark' },
   },
 };
 
