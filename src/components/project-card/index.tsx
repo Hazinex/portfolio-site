@@ -20,7 +20,7 @@ function ProjectCard({ title, href, imageSrc, imageAlt, shortDescription, Compan
 		>
 			<div className="relative w-full h-48 md:h-56 lg:h-48 rounded overflow-hidden">
 				<Image
-					src={imageSrc}
+					src={imageSrc || "/project-images/templateProjectImg.jpg"}
 					alt={imageAlt || "Project Image"}
 					height={500}
 					width={500}

@@ -5,7 +5,7 @@ import { Sansation } from 'next/font/google'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft } from 'lucide-react';
 
-const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation' })
+const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation', fallback: ['system-ui'] })
  
 export default function NotFound() {
 	const router = useRouter();
