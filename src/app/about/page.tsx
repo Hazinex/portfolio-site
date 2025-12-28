@@ -14,7 +14,7 @@ export default function About() {
   return (
 		<>
 			{/* Hero Section */}
-			<section className="flex flex-col items-center justify-center md:flex-row md:items-center md:gap-12">
+			<section className="flex flex-col items-center justify-center m-8 md:flex-row md:items-center md:gap-12">
 				<div>
 					<h1 className="text-center text-4xl font-bold md:text-left ">Hey, I&apos;m Harry!</h1>
 					<p className={`text-center text-2xl md:text-left ${sansation.className}`}> Project Engineer at the Virtual Engineering Center</p>
@@ -33,11 +33,11 @@ export default function About() {
 
 			<div className="flex flex-col items-center justify-center mt-16 md:flex-row md:items-center md:gap-12">
 				<p className="text-center">You can also download or view my CV here:</p>
-				<div className="flex gap-2">
-					<Button>
+				<div className="flex mt-2 gap-2">
+					<Button asChild>
 						<a href="CV_HarryEllis.pdf" target="_blank" rel="noopener noreferrer">View</a>
 					</Button>
-					<Button>
+					<Button asChild>
 						<a href="CV_HarryEllis.pdf" download>Download</a>
 					</Button>
 				</div>
@@ -77,7 +77,7 @@ export default function About() {
 				{/* TVS SCS Article */}
 				<div className="p-8">
 					<article className="flex flex-col max-w-7xl mx-auto items-center md:items-start md:text-right md:flex-row">
-						<div className="pb-8 md:pb-0 pr-8">
+						<div className="pb-8 md:pb-0 md:pr-8">
 							<Image
 								className="rounded-xl drop-shadow-lg drop-shadow-foreground/50"
 								src="/project-images/ar4/warehouse.jpg"

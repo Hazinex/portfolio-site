@@ -134,9 +134,9 @@ export default function Projects() {
 				<div className="items-center">
 					<h1 className={`pt-12 pl-12 pb-4 text-3xl font-bold ${sansation.className}`}>Projects</h1>
 					<p className="pl-12 pb-6 pr-6 text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies.<br /> Each project highlights different skills, tools, and problem-solving approaches.</p>
-					<p className="pl-12 pb-12 pr-6 text-muted-foreground">Click each project to learn more.</p>
+					<p className="pl-12 md:pb-12 pr-6 text-muted-foreground">Click each project to learn more.</p>
 				</div>
-				<div className="md:ml-auto pt-12 pr-12 items-center">
+				<div className="md:ml-auto md:pt-12 pr-12 items-center">
 					<h2 className={`pb-4 text-3xl text-right font-bold ${sansation.className}`}>Legend</h2>
 					<p className="pl-6 text-muted-foreground justify-end text-right">Each project has a logo representing the company or organization it was created for.<br /> Below is a key and links to their websites.</p>
 					<div className="flex flex-col items-end gap-2 pt-4">
@@ -157,7 +157,7 @@ export default function Projects() {
 				</div>
 			</section>
 			<hr className="my-8 mb-16" />
-			<section className="max-w-screen-2xl mx-auto">
+			<section className="max-w-screen-2xl mx-auto px-6 mb-8">
 				<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{projects.map((project) => (
 						<ProjectCard
