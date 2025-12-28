@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
 	return (
-		<footer className="flex justify-between my-10 border-t-4 border-accent/60 pt-10 px-4">
+		<footer className="flex justify-between bg-background py-10 border-t-4 border-accent/60 pt-10 px-4 z-10">
 			<p>&copy; 2026 Harry Ellis | All rights reserved.</p>
 
 			{/* Icon Links */}
