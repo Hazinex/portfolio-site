@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function getLogo(company: string) {
   switch (company) {
     case "Personal":
-      return "/company-logos/personal-logo3.png";
+      return "/company-logos/personal-logo.png";
     case "TVS":
       return "/company-logos/tvs-logo.png";
     case "VEC":

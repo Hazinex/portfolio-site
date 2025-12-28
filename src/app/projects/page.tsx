@@ -4,7 +4,12 @@ import { getLogo } from "@/lib/utils"
 import { Sansation } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { text } from "stream/consumers"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects - Harry Ellis",
+  description: "View my projects",
+};
 
 const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation', fallback: ['system-ui'] })
 
@@ -29,6 +34,15 @@ const projects: ProjectType[] = [
 	},
 	{
 		id: 3,
+		title: "Untitled Horror Game",
+		imageSrc: "/project-images/horror-game/in-game.jpg",
+		imageAlt: "A dark and eerie road with flickering lights.",
+		shortDescription: "A first-person horror game prototype made in the Godot Engine and GDScript.",
+		href: "/projects/horror-game",
+		Company: "Personal"
+	},
+	{
+		id: 4,
 		title: "Computer Vision Damage Detection",
 		imageSrc: "/project-images/smart-meters/cnnarchitecture.png",
 		imageAlt: "A diagram showing a branched CNN architecture.",
@@ -37,7 +51,16 @@ const projects: ProjectType[] = [
 		Company: "TVS"
 	},
 	{
-		id: 4,
+		id: 5,
+		title: "VR Training Simulator",
+		imageSrc: "/project-images/vr-training/training-sim.png",
+		imageAlt: "A 'White-box' style VR training environment game screenshot",
+		shortDescription: "A VR training simulator for smart meter triage using the Godot Engine and GDScript.",
+		href: "/projects/vr-training-simulator",
+		Company: "TVS"
+	},
+	{
+		id: 6,
 		title: "AR4 Robotic Arm",
 		imageSrc: "/project-images/ar4/shot.jpg",
 		imageAlt: "A robotic arm picking up an object.",
@@ -46,7 +69,7 @@ const projects: ProjectType[] = [
 		Company: "TVS"
 	},
 	{
-		id: 5,
+		id: 7,
 		title: "Part Identification App",
 		imageSrc: "/project-images/parts-app/main.jpg",
 		imageAlt: "A mobile app interface showing placeholder with prompts to enter an image or take a photo.",
@@ -55,7 +78,7 @@ const projects: ProjectType[] = [
 		Company: "TVS"
 	},
 	{
-		id: 6,
+		id: 8,
 		title: "CesiumJS Bermuda & Liverpool",
 		imageSrc: "/project-images/cesiumjs/hamilton.png",
 		imageAlt: "A 3D map of Bermuda using CesiumJS.",
@@ -64,7 +87,7 @@ const projects: ProjectType[] = [
 		Company: "VEC"
 	},
 	{
-		id: 7,
+		id: 9,
 		title: "MagnifyB Website",
 		imageSrc: "/project-images/magnifyb/home.png",
 		imageAlt: "A screenshot of the MagnifyB website homepage.",
@@ -73,13 +96,13 @@ const projects: ProjectType[] = [
 		Company: "VEC"
 	},
 	{
-		id: 8,
+		id: 10,
 		title: "Portfolio Site",
 		imageSrc: "/project-images/portfolio-site/placeholder.png",
 		imageAlt: "A screenshot of the portfolio website homepage.",
 		shortDescription: "The website you are currently on, built with Next.js and Tailwind CSS.",
 		href: "/projects/portfolio-site",
-		Company: "VEC"
+		Company: "Personal"
 	}
 ]
 
@@ -120,7 +143,7 @@ export default function Projects() {
 						{companies.map((company) => (
 							<div className="flex items-center gap-2" key={company.id}>
 								<Link href={company.website}>
-									<p className="text-muted-foreground text-right hover:text-foreground hover:underline">{company.text}</p>
+									<p className="text-muted-foreground text-right hover:text-foreground underline md:no-underline md:hover:underline">{company.text}</p>
 								</Link>
 								<Image
 									src={getLogo(company.name)}
