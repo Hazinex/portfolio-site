@@ -1,6 +1,12 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sansation } from "next/font/google"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About - Harry Ellis",
+  description: "Learn more about Harry Ellis",
+};
 
 const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation', fallback: ['system-ui'] })
 
