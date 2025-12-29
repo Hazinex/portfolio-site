@@ -2,12 +2,18 @@
 
 import { ChevronDown, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 function MobileNavMenu() {
 
 	const [open, setOpen] = useState(false);
+	const pathname = usePathname();
+
+	useEffect(() => {
+    	setOpen(false);
+  	}, [pathname]);
 
 	return (
 		<div className="flex flex-col items-center justify-center">
@@ -31,13 +37,16 @@ function MobileNavMenu() {
 
 				{/* Menu Items */}
 				<div className="flex flex-col gap-2">
-					<Button className="w-full" variant="ghost" size="sm">
+					<Button asChild className={pathname === '/' ? 'w-full bg-accent/30 rounded-none' : "w-full"} variant= "ghost" size="sm">
 						<Link href="/">Home</Link>
 					</Button>
-					<Button className="w-full" variant="ghost" size="sm">
+					<Button asChild className={pathname === '/projects' ? 'w-full bg-accent/30 rounded-none' : "w-full"} variant="ghost" size="sm">
+						<Link href="/projects">Projects</Link>
+					</Button>
+					<Button asChild className={pathname === '/about' ? 'w-full bg-accent/30 rounded-none' : "w-full"} variant="ghost" size="sm">
 						<Link href="/about">About</Link>
 					</Button>
-					<Button className="w-full" variant="ghost" size="sm">
+					<Button asChild className={pathname === '/contact' ? 'w-full bg-accent/30 rounded-none' : "w-full"} variant="ghost" size="sm">
 						<Link href="/contact">Contact</Link>
 					</Button>
 				</div>

@@ -22,16 +22,16 @@ function Navbar() {
 
 			{/* Desktop Navigation */}
 			<div className="hidden md:flex items-center gap-4">
-				<Button variant="ghost" size="sm" className={pathname === '/' ? 'relative border-b-8 border-accent' : ''}>
+				<Button asChild variant="ghost" size="sm" className={pathname === '/' ? 'relative border-b-8 border-accent' : ''}>
 					<Link href="/">Home</Link>
 				</Button>
-				<Button variant="ghost" size="sm" className={pathname === '/projects' ? 'relative border-b-8 border-accent' : ''}>
+				<Button asChild variant="ghost" size="sm" className={pathname === '/projects' ? 'relative border-b-8 border-accent' : ''}>
 					<Link href="/projects">Projects</Link>
 				</Button>
-				<Button variant="ghost" size="sm" className={pathname === '/about' ? 'relative border-b-8 border-accent' : ''}>
+				<Button asChild variant="ghost" size="sm" className={pathname === '/about' ? 'relative border-b-8 border-accent' : ''}>
 					<Link href="/about">About</Link>
 				</Button>
-				<Button variant="ghost" size="sm" className={pathname === '/contact' ? 'relative border-b-8 border-accent' : ''}>
+				<Button asChild variant="ghost" size="sm" className={pathname === '/contact' ? 'relative border-b-8 border-accent' : ''}>
 					<Link href="/contact">Contact</Link>
 				</Button>
 			</div>

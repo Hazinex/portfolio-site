@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Sansation } from "next/font/google"
 import type { Metadata } from "next";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation', fallback: ['system-ui'] })
@@ -13,9 +13,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-		<div className="flex items-center justify-center max-w-7xl mx-auto min-h-screen">
-			<section className="flex flex-col m-6 p-6 bg-muted rounded-2xl">
-
+		<div className="flex flex-col flex-1 items-center justify-center m-4">
+			<div className="bg-muted rounded-2xl p-8 max-w-2xl">
 				<div>
 					<h1 className="text-center text-4xl font-bold ">Get in touch!</h1>
 					<p className={`text-center text-2xl mt-4 ${sansation.className}`}>
@@ -29,19 +28,13 @@ export default function ContactPage() {
 						<p>The best way to reach me is by email</p>
 					</div>
 					<div className="flex justify-center gap-8">
-						<div className="flex flex:row items-center gap-2">
+						<div className=" flex flex-row gap-2">
 							<Mail className="w-5 h-5" />
 							<Link
 								href="mailto:contact@magnifyb.com"
 								className="underline"
 							>
 								harry.ellis3@outlook.com
-							</Link>
-						</div>
-						<div className="flex items-center gap-2">
-							<Phone className="w-5 h-5" />
-							<Link href="tel:+447985123327" className="underline">
-								07985 123327
 							</Link>
 						</div>
 					</div>
@@ -58,8 +51,7 @@ export default function ContactPage() {
 						</Link>
 					</div>
 				</div>
-			</section>
+			</div>
 		</div>
-
   );
 }
