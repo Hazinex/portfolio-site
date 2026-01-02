@@ -2,11 +2,7 @@
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { Sansation } from "next/font/google";
-<<<<<<< HEAD
-import { JSX, useEffect, useState } from "react";
-=======
 import { JSX, useEffect, useMemo, useState } from "react";
->>>>>>> feat/misc
 
 const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation', fallback: ['system-ui'] })
 
@@ -22,13 +18,6 @@ export default function FramerTypewriter({
   const [chars, setChars] = useState<JSX.Element[]>([]);
 
   // Precompute all highlight indices
-<<<<<<< HEAD
-  const highlightIndices = highlightWord
-    ? Array.from(text.matchAll(new RegExp(highlightWord, "gi"))).flatMap((match) =>
-        Array.from({ length: match[0].length }, (_, i) => match.index! + i)
-      )
-    : [];
-=======
   const highlightIndices = useMemo(() => {
   if (!highlightWord) return [];
 
@@ -36,7 +25,6 @@ export default function FramerTypewriter({
       Array.from({ length: match[0].length }, (_, i) => match.index! + i)
     );
   }, [text, highlightWord]);
->>>>>>> feat/misc
 
   useEffect(() => {
     const controls = animate(count, text.length, {
@@ -62,19 +50,11 @@ export default function FramerTypewriter({
       controls.stop();
       unsubscribe();
     };
-<<<<<<< HEAD
-  }, [text, highlightWord, highlightIndices]);
-
-  return (
-    <span className="text-center">
-      <motion.span className={`${sansation.className} font-bold text-8xl text-wrap`}>{chars}</motion.span>
-=======
   }, [text, highlightWord, highlightIndices, count, rounded]);
 
   return (
     <span className="text-center">
       <motion.span className={`${sansation.className} font-bold text-7xl md:text-8xl text-wrap`}>{chars}</motion.span>
->>>>>>> feat/misc
       {/* Blinking Cursor */}
       <motion.span
         initial={{ opacity: 0 }}
