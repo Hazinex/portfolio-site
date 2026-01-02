@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Sansation } from "next/font/google"
 import type { Metadata } from "next";
-import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { ContactForm } from "@/components/contact-form";
 

@@ -10,13 +10,15 @@ interface ProjectCardProps {
 	shortDescription?: string;
 	href: string;
 	Company: "Personal" | "TVS" | "VEC";
+  delay: number
 }
 
-function ProjectCard({ title, href, imageSrc, imageAlt, shortDescription, Company }: ProjectCardProps) {
+function ProjectCard({ title, href, imageSrc, imageAlt, shortDescription, Company, delay }: ProjectCardProps) {
 	return (
 		<Link
 			href={href}
-			className="block border rounded-xl bg-card p-4 hover:scale-105 transform transition-transform duration-300 ease-in-out"
+			className={`block border rounded-xl bg-card p-4 hover:scale-105 transform transition-transform duration-300 ease-in-out animate-fly-up opacity-0`}
+      style={{ animationDelay: `${delay}s`, animationFillMode: 'forwards' }}
 		>
 			<div className="relative w-full h-48 md:h-56 lg:h-48 rounded overflow-hidden">
 				<Image

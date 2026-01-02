@@ -16,8 +16,8 @@ export default function About() {
 			{/* Hero Section */}
 			<section className="flex flex-col items-center justify-center m-8 md:flex-row md:items-center md:gap-12">
 				<div>
-					<h1 className="text-center text-4xl font-bold md:text-left ">Hey, I&apos;m Harry!</h1>
-					<p className={`text-center text-2xl md:text-left ${sansation.className}`}> Project Engineer at the Virtual Engineering Center</p>
+					<h1 className="text-center text-4xl font-bold md:text-left animate-fly-right opacity-0">Hey, I&apos;m Harry!</h1>
+					<p className={`text-center text-2xl md:text-left animate-fly-left opacity-0 ${sansation.className}`}> Project Engineer at the Virtual Engineering Center</p>
 				</div>
 				<div className="relative w-fit mt-6">
 					<div className="absolute -bottom-6 -right-6 w-full h-full rounded-xl border-2 border-accent" />

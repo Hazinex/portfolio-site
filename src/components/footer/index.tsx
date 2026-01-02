@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Footer() {
 	return (

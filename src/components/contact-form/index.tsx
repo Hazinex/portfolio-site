@@ -16,9 +16,13 @@ import { useState } from "react"
 
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    setSending(true)
+    setError(false)
 
     const formData = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries())
 
@@ -32,11 +36,14 @@ function ContactForm() {
         }
         return response.json()
       })
-      setSubmitted(true)
     }
     catch (err) {
+      setError(true)
       console.log(err)
-      alert('An error occurred while sending your message...')
+    }
+    finally {
+      setSubmitted(true)
+      setSending(false)
     }
   }
 
@@ -76,11 +83,18 @@ function ContactForm() {
               />
           </Field>
           <Button type="submit">
-            Submit
+            {!sending ? (
+              <p>Send Message</p>
+            ) : (
+              <span className="h-4 w-4 animate-spin rounded-full border-2 border-background border-t-transparent" />
+            )}
           </Button>
-          {submitted && 
+          {submitted && !error && (
             <p className="text-green-500">Your message has been sent successfully!</p>
-          }
+          )}
+          {submitted && error && (
+             <p className="text-red-500">Sorry your message was not sent. Please reach out to me on LinkedIn or by using the details on my CV in the About section</p>
+          )}
         </FieldGroup>
       </FieldSet>
     </form>

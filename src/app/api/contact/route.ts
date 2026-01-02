@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json();
 
-  const { data, error } = await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: `${body.firstname + " " + body.lastname} <onboarding@resend.dev>`,
     to: [process.env.EMAIL || ""],
     subject: `${body.subject} - Portfolio Contact`,

@@ -26,7 +26,15 @@ function ParticleBackground() {
     if (!ctx) return
 
     /* -------------------- Configuration -------------------- */
+<<<<<<< HEAD
     const PARTICLE_COUNT = 200 // Lowered slightly for performance with lines
+=======
+<<<<<<< HEAD
+    const PARTICLE_COUNT = 200 // Lowered slightly for performance with lines
+=======
+    const PARTICLE_COUNT = window.innerWidth/5
+>>>>>>> feat/misc
+>>>>>>> dev
     const CONNECTION_DIST = 100 // Distance to snap lines
     const REPEL_RADIUS = 100
     const FORCE_STRENGTH = 0.5
@@ -121,7 +129,15 @@ function ParticleBackground() {
             const opacity = 1 - distance / CONNECTION_DIST
             ctx.beginPath()
             ctx.strokeStyle = `rgba(100, 100, 255, ${opacity * 0.4})` // Blue-ish tint for lines
+<<<<<<< HEAD
             ctx.lineWidth = 0.5
+=======
+<<<<<<< HEAD
+            ctx.lineWidth = 0.5
+=======
+            ctx.lineWidth = 2
+>>>>>>> feat/misc
+>>>>>>> dev
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(p2.x, p2.y)
             ctx.stroke()
