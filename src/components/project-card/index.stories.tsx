@@ -27,6 +27,7 @@ export const Default: Story = {
 		shortDescription: 'This is a short description of the example project to showcase the ProjectCard component in Storybook.',
 		href: '#',
 		Company: 'Personal',
+    delay: 1
 	},
 }
 
@@ -38,5 +39,6 @@ export const WithLongTitle: Story = {
 		shortDescription: 'This is a short description of the example project to showcase the ProjectCard component in Storybook.',
 		href: '#',
 		Company: 'TVS',
+    delay: 1
 	},
 }

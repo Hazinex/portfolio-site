@@ -1,8 +1,9 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLast, ChevronLeft, ChevronRight, Cross, X } from "lucide-react"
-import { useEffect, useState } from "react"
+import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import Image from "next/image"
+import { useEffect, useState, useCallback } from "react"
 
 type Image = {
   src: string
@@ -20,10 +21,13 @@ export function GalleryLightbox({
 }) {
   const [index, setIndex] = useState(startIndex)
 
-  const prev = () =>
+  const prev = useCallback(() => {
     setIndex((i) => (i - 1 + images.length) % images.length)
-  const next = () =>
+  }, [images.length])
+
+  const next = useCallback(() => {
     setIndex((i) => (i + 1) % images.length)
+  }, [images.length])
 
   // Keyboard support
   useEffect(() => {
@@ -35,7 +39,7 @@ export function GalleryLightbox({
 
     window.addEventListener("keydown", onKey)
     return () => window.removeEventListener("keydown", onKey)
-  }, [])
+  }, [onClose, prev, next])
 
   return (
     <AnimatePresence>
@@ -62,9 +66,11 @@ export function GalleryLightbox({
             if (info.offset.x < -20) next()
           }}
         >
-          <img
+          <Image
             src={images[index].src}
             alt={images[index].alt}
+            height={1500}
+            width={1500}
             className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
             draggable={false}
           />

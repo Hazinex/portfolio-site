@@ -12,8 +12,9 @@ function MobileNavMenu() {
 	const pathname = usePathname();
 
 	useEffect(() => {
-    	setOpen(false);
-  	}, [pathname]);
+    {/* eslint-disable-next-line */} 
+    setOpen(false);
+  }, [pathname]);
 
 	return (
 		<div className="flex flex-col items-center justify-center">

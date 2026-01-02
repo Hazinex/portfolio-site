@@ -22,6 +22,7 @@ export function GalleryPreview({
           onClick={() => onOpen(index)}
           className="relative aspect-4/3 overflow-hidden hover:cursor-pointer"
         >
+          {/* eslint-disable-next-line */} 
           <img
             src={img.src}
             alt={img.alt}

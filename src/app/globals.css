@@ -121,6 +121,58 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    position: relative; 
+    width: 100%;
   }
+}
+
+@theme {
+  /* Define the keyframes */
+  @keyframes fly-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fly-right {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fly-left {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fly-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Link the keyframes to an animation utility */
+  --animate-fly-up: fly-up 0.8s ease-out forwards;
+  --animate-fly-right: fly-right 0.8s ease-out forwards;
+  --animate-fly-left: fly-left 0.8s ease-out forwards;
+  --animate-fly-down: fly-down 0.8s ease-out forwards;
 }
