@@ -21,7 +21,7 @@ export default function Projects() {
 			<section className="flex flex-col md:flex-row gap-20">
 				<div className="items-center animate-fly-right">
 					<h1 className={`pt-12 pl-6 md:pl-12 pb-4 text-3xl font-bold ${sansation.className}`}>Projects</h1>
-					<p className="px-6 md:pl-12 pb-6 md:pr-6 text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies.<br /> Each project highlights different skills, tools, and problem-solving approaches.</p>
+					<p className="px-6 md:pl-12 pb-6 md:pr-6 text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies.<br /> Each project highlights different skills, tools, and scanarios.</p>
 					<p className="pl-6 md:pl-12 md:pb-12 md:pr-6 text-muted-foreground">Click each project to learn more.</p>
 				</div>
 				<div className="md:ml-auto md:pt-12 pr-6 md:pr-12 items-center animate-fly-left">
@@ -47,7 +47,7 @@ export default function Projects() {
 			<hr className="my-8 mb-16" />
 			<section className="max-w-screen-2xl mx-auto px-6 mb-8">
 				<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{ProjectsData.map((project) => (
+					{ProjectsData.filter(project => project.released).map((project, index) => (
 						<ProjectCard
 							key={project.id}
 							title={project.title}
@@ -56,7 +56,7 @@ export default function Projects() {
 							imageAlt={project.thumbnailAlt}
 							shortDescription={project.shortDescription}
 							Company={project.Company}
-              delay={project.delay}
+              delay={index * 0.1}
 						/>
 					))}
 				</div>
