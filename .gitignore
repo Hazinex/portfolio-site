@@ -24,6 +24,7 @@
 .DS_Store
 *.pem
 *todo.md
+*projects.docx
 
 # debug
 npm-debug.log*

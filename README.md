@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Overview
+
+Hello! This is my (Harry Ellis) portfolio website! I created this website to show off what projects I've worked on that can't be captured on a CV.
+
+Feel free to use the code from this website.
+If you do, I’d appreciate a small credit somewhere — thank you!
+
+
+## Tech Stack
+
+* **Framework:** Next.js (App Router)
+* **Styling:** Tailwind CSS
+* **Language:** TypeScript
+* **UI Components:** (shadcn/ui, custom components)
+* **Other:** (Framer Motion, Resend)
+
+
+## Screenshots / Demo
+
+![Screenshot from Main Page](/public/project-images/portfolio-site/home.png "Screenshot from Main Page")
+
+[Here is the site in production!](https://www.harryellis.dev/)
+
+
+## Features
+
+* Home Page with particle effect and typewriter text
+* Projects page with dynamically rendered cards and slug-based pages 
+* About page with CV viewer
+* Contact form using resend
+
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+* Node.js (version v24.12.0 or higher)
+* npm / pnpm / yarn / bun
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` file in the root:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+EMAIL=YOUR_EMAIL_HERE
+RESEND_API_KEY=YOUR_API_KEY_HERE
+```
 
-## Deploy on Vercel
+* The email is the destination of the message from the contact page
+* Resend is a email service platform for building, testing, and sending transactional and marketing emails, I've used it here to avoid creating additional server instances to handle email requests and so on.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+```bash
+bun run dev      # Start dev server
+bun run build    # Build for production
+bun run start    # Run production build
+bun run lint     # Lint code
+```
+
+
+## Roadmap
+
+* Find a way to link and style in the paragraphs
+* Add series, ie. game dev series, Robot series etc
+* Filter projects by technology used
+* Add videos to the gallery
+
+
+## Author
+
+* Portfolio: [https://www.harryellis.dev/](https://www.harryellis.dev/)
+* GitHub: [https://github.com/Hazinex](https://github.com/Hazinex)
+
+## License
+
+This project is open-source. You are free to use and modify the code.
+Attribution is appreciated but not required.

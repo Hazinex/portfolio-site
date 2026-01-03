@@ -54,7 +54,7 @@ export default function About() {
 							<p className="mt-4 pr-6">
 								Hello! I&apos;m Harry, a Project Engineer at the Virtual Engineering Center (VEC) based in
 								Liverpool, UK. I graduated from Edge Hill University in 2024 with a degree in
-								BSc Computer Science with a first. My degree provided me with a solid foundation in many disciplines such as
+								BSc Computer Science with first-class honors. My degree provided me with a solid foundation in many disciplines such as
 								software development, data structures, algorithms, databases, web development, and artificial intelligence.
 								During my time at university, I also gained practical experience through various projects, internships,
 								and within extracurricular clubs, cyber-security club and Research club.
@@ -105,7 +105,7 @@ export default function About() {
 						<div className="flex-1">
 						<h2 className={`text-2xl ${sansation.className}`}>Virtual Engineering Center - Project Engineer</h2>
 							<p className="mt-4 pr-6">
-								After a year at TVS SCS, I was made redundant due to budget cuts.
+								After a year at TVS SCS, I was made redundant due to budget limitations.
 								However, this led me to my current role as a project engineer at the Virtual Engineering Center (VEC) in Liverpool.
 								My role is currently focused on front-end web development using modern frameworks such as Next.js and Svelte.
 							</p>
