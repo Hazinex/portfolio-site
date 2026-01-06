@@ -172,47 +172,44 @@ export const ProjectsData: ProjectType[] = [
   },
 	{
     id: 8,
+    title: "Finance Website",
+    thumbnailSrc: "/project-images/finance-website/home1.png",
+    thumbnailAlt: "Screenshot of the finance website's homepage.",
+    shortDescription: "Website built with Next.js and Tailwind CSS.",
+    Company: "VEC",
+    gallery: [
+      { src: "/project-images/finance-website/home1.png", alt: "Screenshot of the top part of the website's homepage" },
+      { src: "/project-images/finance-website/home2.png", alt: "Subscription tiers available for the website" },
+      { src: "/project-images/finance-website/dash.png", alt: "Dashboard page of the new site" },
+      { src: "/project-images/finance-website/signup.png", alt: "This project has less than 4 images, this is a filler image" },
+    ],
+    paragraphs: [
+      { number: 1, header: "First Project at VEC", content: "I was thrilled to have landed this job after working for TVS for a year, switching focus from a very corporate job in transport to one with exciting new technologies more aligned with my interests was a welcome change. The Virtual Engineering Centre focusses on using emerging technologies to help small-medium sized enterprises in the UK. My first project while working here was to improve the design of an existing website for one of our clients (Unfortunately, the name cannot be posted here). When I first heard that I will be working on websites during my time here, to be honest, I was sceptical. My only exposure to web development was in my first year of university, which had me using technologies that hadn't been used in industry for years. Needless to say, it was quite frustrating. My only respite was that a friend had mentioned he uses the same tech stack and that I should learn it to because it's quite fun." },
+      { number: 2, header: "Learning Something Completely New & AI Guided Learning", content: "Learning a new programming language is hard in and of itself, learning a completely new field of programming is harder. While I wasn't thrown straight into a new codebase, I was expected to start creating components out the gate with no formal learning time. This trial by fire approach ended up being quite beneficial as oftentimes learning a skill in an isolated environment doesn't reflect what you do in the real world. Something I didn't expect was how useful AI code generation is for learning (That doesn't mean I vibe coded the whole website by the way!). I found AI generated code lets me understand small pieces of a larger code block bit by bit. Comparatively to traditional learning I'd have to write a whole block of code to see any result, by which time I would have no idea what each bit does, just that I had to write it to get it to work." },
+      { number: 3, header: "The Project Itself", content: "While I had not been there from the beginning of the project, this iteration of work for me was focussed on rebuilding the front-end design of a finance website. The company targeted small personal companies, such as local tradesmen, or restaurateurs, to help improve their finances and knowledge around it. For them I had to produce a variety of pages as a part of a small team of 3 people, with me focussing on front-end and them the back-end. This was also a big shift in workflow for me from my previous job. Having people developing alongside me and then having to present that to a client, was daunting but exciting. These were really people's business, so the work I did has an impact, previously unseen in my last role." },
+    ],
+    technologies: ["NextJS", "Tailwind", "Storybook", "Git", "TypeScript"],
+    released: true
+  },
+  {
+    id: 9,
     title: "CesiumJS Bermuda & Liverpool",
     thumbnailSrc: "/project-images/cesiumjs/hamilton.png",
     thumbnailAlt: "A 3D map of Bermuda using CesiumJS.",
     shortDescription: "Interactive 3D map of Bermuda and Liverpool using CesiumJS.",
     Company: "VEC",
     gallery: [
-      { src: "/project-images/cesiumjs/hamilton.png", alt: "A 3D map of Bermuda using CesiumJS" },
-      { src: "/project-images/blanks/no-image-2.png", alt: "This project has less than 4 images, this is a filler image" },
-      { src: "/project-images/blanks/no-image-3.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/cesiumjs/prom.png", alt: "A 3D map of Bermuda using CesiumJS" },
+      { src: "/project-images/cesiumjs/hamilton.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/cesiumjs/sheil.png", alt: "This project has less than 4 images, this is a filler image" },
       { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
     ],
     paragraphs: [
-      { number: 1, header: "", content: "" },
-      { number: 2, header: "", content: "" },
-      { number: 3, header: "", content: "" },
-      { number: 4, header: "", content: "" },
+      { number: 1, header: "First Bit of Visualisation work", content: "This project involved using CesiumJS to make a 3D explorable representation of Bermuda. While I could've stopped at just adding OSM (OpenStreetMap) Buildings. I thought it worthwhile to add some additional toggleable layers that showed entities like waterways, road conditions, historical storms paths etc. This is still an on-going project, with better ariels scans in the works to increase fidelity." },
+      { number: 2, header: "Adapting Meta Liverpool", content: "The VEC also has an ongoing project called 'Meta Liverpool', a digital twin inside of unreal engine that uses pixel streaming. This can be used for areas such as town planning by looking at traffic simulation or solar panel placement. I decided to make a version of this in CesiumJS that is runnable in a browser, this way it was more distributable to clients. " },
     ],
-    technologies: ["JavaScript", "CesiumJS", "Aerial Scanning"],
-    released: false
-  },
-	{
-    id: 9,
-    title: "MagnifyB Website",
-    thumbnailSrc: "/project-images/magnifyb/home.png",
-    thumbnailAlt: "A screenshot of the MagnifyB website homepage.",
-    shortDescription: "Website built with Next.js and Tailwind CSS.",
-    Company: "VEC",
-    gallery: [
-      { src: "/project-images/magnifyb/home.png", alt: "A screenshot of the MagnifyB website homepage" },
-      { src: "/project-images/magnifyb/signup.png", alt: "signup form for the MagnifyB website" },
-      { src: "/project-images/magnifyb/dashboardTemp.png", alt: "Dashboard page of the new site" },
-      { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
-    ],
-    paragraphs: [
-      { number: 1, header: "", content: "" },
-      { number: 2, header: "", content: "" },
-      { number: 3, header: "", content: "" },
-      { number: 4, header: "", content: "" },
-    ],
-    technologies: ["NextJS", "Tailwind", "Git", "TypeScript"],
-    released: false
+    technologies: ["JavaScript", "CesiumJS"],
+    released: true
   },
 	{
     id: 10,
@@ -234,7 +231,7 @@ export const ProjectsData: ProjectType[] = [
       { number: 2, header: "Why I Didn't Have One in the Past", content: "While web development isn't my biggest passion I love learning new technologies. My only prior web development experience prior to working at the VEC was in 2021 at university, we used an ancient version of jQuery to recreate a website to nebulous standards. In contrast, here at the VEC I'm working on real projects and learning something useful. Making this website before I started seemed impossible, but now I know I could make something serviceable for myself, and I've had a great time doing so. " },
       { number: 3, header: "What's Next? (Dev Log)", content: "(03/01/25) As of writing I'm nearing the final commit for a V1.0 version of this website, just a few text edits to go! I made this website within the two-week university closure, so development will slow down as I return to work, but I still have a few plans on my Todo list: Find a way to link and style in the paragraphs | Add series, i.e. game dev series, Robot series etc. | Filter projects by technology used | Add videos to the gallery. Thank you for taking the time to visit my website and read some projects, it means a lot this effort has not gone to waste :)" },
     ],
-    technologies: ["NextJS", "Tailwind", "Git", "TypeScript"],
+    technologies: ["NextJS", "Tailwind", "Storybook", "Git", "TypeScript"],
     released: true
   }
 ]

@@ -47,7 +47,11 @@ export default function Projects() {
 			<hr className="my-8 mb-16" />
 			<section className="max-w-screen-2xl mx-auto px-6 mb-8">
 				<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{ProjectsData.filter(project => project.released).map((project, index) => (
+					{ProjectsData
+          .filter(project => project.released)
+          .slice()
+          .reverse()
+          .map((project, index) => (
 						<ProjectCard
 							key={project.id}
 							title={project.title}
