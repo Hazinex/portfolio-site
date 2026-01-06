@@ -12,12 +12,13 @@ import {
 import { Input } from "@/components/ui/shadcn/input"
 import { Textarea } from "@/components/ui/shadcn/textarea"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -34,6 +35,7 @@ function ContactForm() {
         if (!response.ok) {
           throw new Error(`HTTP Error Status: ${response.status}`)
         }
+        formRef.current?.reset()
         return response.json()
       })
     }
@@ -48,7 +50,7 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="outline rounded-2xl mt-8 md:m-8 p-4 md:p-8 shadow-2xl bg-muted-foreground/10">
+    <form onSubmit={handleSubmit} ref={formRef} className="outline rounded-2xl mt-8 md:m-8 p-4 md:p-8 shadow-2xl bg-muted-foreground/10">
       <FieldSet>
         <FieldLegend>Contact Form</FieldLegend>
         <FieldDescription>Enter your information and message below</FieldDescription>
