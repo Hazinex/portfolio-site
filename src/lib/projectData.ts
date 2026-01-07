@@ -173,15 +173,15 @@ export const ProjectsData: ProjectType[] = [
 	{
     id: 8,
     title: "Finance Website",
-    thumbnailSrc: "/project-images/finance-website/home1.png",
+    thumbnailSrc: "/project-images/finance-website/dash.png",
     thumbnailAlt: "Screenshot of the finance website's homepage.",
     shortDescription: "Website built with Next.js and Tailwind CSS.",
     Company: "VEC",
     gallery: [
-      { src: "/project-images/finance-website/home1.png", alt: "Screenshot of the top part of the website's homepage" },
-      { src: "/project-images/finance-website/home2.png", alt: "Subscription tiers available for the website" },
-      { src: "/project-images/finance-website/dash.png", alt: "Dashboard page of the new site" },
-      { src: "/project-images/finance-website/signup.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/finance-website/dash.png", alt: "Screenshot of the financial dashboard showing key figures" },
+      { src: "/project-images/blanks/no-image-2.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/blanks/no-image-3.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
     ],
     paragraphs: [
       { number: 1, header: "First Project at VEC", content: "I was thrilled to have landed this job after working for TVS for a year, switching focus from a very corporate job in transport to one with exciting new technologies more aligned with my interests was a welcome change. The Virtual Engineering Centre focusses on using emerging technologies to help small-medium sized enterprises in the UK. My first project while working here was to improve the design of an existing website for one of our clients (Unfortunately, the name cannot be posted here). When I first heard that I will be working on websites during my time here, to be honest, I was sceptical. My only exposure to web development was in my first year of university, which had me using technologies that hadn't been used in industry for years. Needless to say, it was quite frustrating. My only respite was that a friend had mentioned he uses the same tech stack and that I should learn it to because it's quite fun." },
