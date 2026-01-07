@@ -28,10 +28,10 @@ export default function ContactPage() {
 				<div className="flex justify-center items-center pt-6">
 					<p className="pr-6">You can also find me here:</p>
 					<div className="flex gap-4">
-						<Link href="#">
+						<Link href="https://www.linkedin.com/in/harryellis3/">
 							<FaLinkedin size={32} />
 						</Link>
-						<Link href="#">
+						<Link href="https://github.com/Hazinex">
 							<FaGithub size={32} />
 						</Link>
 					</div>
