@@ -3,10 +3,16 @@
 import { useState } from "react"
 import { GalleryPreview } from "@/components/gallery/GalleryPreview"
 import { GalleryLightbox } from "@/components/gallery/GalleryLightbox"
-import { ProjectType } from "@/lib/projectData"
+
+type GalleryItem = {
+  src: string
+  alt: string
+  type?: "image" | "video"
+  thumbnail?: string
+}
 
 type ProjectGalleryProps = {
-  images: ProjectType["gallery"]
+  images: GalleryItem[]
 }
 
 export function ProjectGallery({ images }: ProjectGalleryProps) {

@@ -18,33 +18,35 @@ const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variab
 export default function Projects() {
 	return (
 		<>
-			<section className="flex flex-col md:flex-row gap-20">
-				<div className="items-center animate-fly-right">
-					<h1 className={`pt-12 pl-6 md:pl-12 pb-4 text-3xl font-bold ${sansation.className}`}>Projects</h1>
-					<p className="px-6 md:pl-12 pb-6 md:pr-6 text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies.<br /> Each project highlights different skills, tools, and scanarios.</p>
-					<p className="pl-6 md:pl-12 md:pb-12 md:pr-6 text-muted-foreground">Click each project to learn more.</p>
-				</div>
-				<div className="md:ml-auto md:pt-12 pr-6 md:pr-12 items-center animate-fly-left">
-					<h2 className={`pb-4 text-3xl text-right font-bold ${sansation.className}`}>Legend</h2>
-					<p className="pl-6 text-muted-foreground justify-end text-right">Each project has a logo representing the company or organization it was created for.<br /> Below is a key and links to their websites.</p>
-					<div className="flex flex-col items-end gap-2 pt-4">
-						{CompanyData.map((company) => (
-							<div className="flex items-center gap-2" key={company.id}>
-								<Link href={company.website}>
-									<p className="text-muted-foreground text-right hover:text-foreground underline md:no-underline md:hover:underline">{company.text}</p>
-								</Link>
-								<Image
-									src={getLogo(company.name)}
-									alt={`${company.name} Logo`}
-									height={50}
-									width={50}
-								/>
-							</div>
-						))}
+			<div>
+				<section className="flex flex-col md:flex-row gap-20 mb-12">
+					<div className="items-center animate-fly-right">
+						<h1 className={`pt-12 pl-6 md:pl-12 pb-4 text-3xl font-bold ${sansation.className}`}>Projects</h1>
+						<p className="px-6 md:pl-12 pb-6 md:pr-6 text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies.<br /> Each project highlights different skills, tools, and scanarios.</p>
+						<p className="pl-6 md:pl-12 md:pb-12 md:pr-6 text-muted-foreground">Click each project to learn more.</p>
 					</div>
-				</div>
-			</section>
-			<hr className="my-8 mb-16" />
+					<div className="md:ml-auto md:pt-12 pr-6 md:pr-12 items-center animate-fly-left">
+						<h2 className={`pb-4 text-3xl text-right font-bold ${sansation.className}`}>Legend</h2>
+						<p className="pl-6 text-muted-foreground justify-end text-right">Each project has a logo representing the company or organization it was created for.<br /> Below is a key and links to their websites.</p>
+						<div className="flex flex-col items-end gap-2 pt-4">
+							{CompanyData.map((company) => (
+								<div className="flex items-center gap-2" key={company.id}>
+									<Link href={company.website}>
+										<p className="text-muted-foreground text-right hover:text-foreground underline md:no-underline md:hover:underline">{company.text}</p>
+									</Link>
+									<Image
+										src={getLogo(company.name)}
+										alt={`${company.name} Logo`}
+										height={50}
+										width={50}
+									/>
+								</div>
+							))}
+						</div>
+					</div>
+				</section>
+				<hr className="mt-8 mb-8 mx-4 md:mx-32 animate-fly-up" />
+			</div>
 			<section className="max-w-screen-2xl mx-auto px-6 mb-8">
 				<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{ProjectsData
@@ -60,7 +62,7 @@ export default function Projects() {
 							imageAlt={project.thumbnailAlt}
 							shortDescription={project.shortDescription}
 							Company={project.Company}
-              delay={index * 0.1}
+              delay={index * 0.1 + 0.5}
 						/>
 					))}
 				</div>

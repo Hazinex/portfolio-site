@@ -81,7 +81,7 @@ export default function About() {
 							<Image
 								className="rounded-xl drop-shadow-lg drop-shadow-foreground/50"
 								src="/project-images/ar4/warehouse.jpg"
-								alt="VEC Building"
+								alt="AR4 Robotic arm in warehouse"
 								width={400}
 								height={300}
 							/>

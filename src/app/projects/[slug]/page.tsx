@@ -5,6 +5,7 @@ import { ProjectGallery } from "@/components/gallery"
 import { Sansation } from "next/font/google"
 import { Metadata } from "next"
 import { BackButton } from "@/components/ui/back-button"
+import ReactMarkdown from "react-markdown"
 
 const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation', fallback: ['system-ui'] })
 
@@ -49,7 +50,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             {project.paragraphs.map((paragraph) => (
               <section key={paragraph.number} className="mt-8">
                 <h2 className={`${sansation.className} text-2xl`}>{paragraph.header}</h2>
-                <p>{paragraph.content}</p>
+                <div className="prose dark:prose-invert max-w-none">
+                  <ReactMarkdown components={{ a: ({node, ...props}) => <a {...props} className="text-blue-400 hover:text-blue-500" /> }}>
+                    {paragraph.content}
+                  </ReactMarkdown>
+                </div>
               </section>
             ))}
           </article>

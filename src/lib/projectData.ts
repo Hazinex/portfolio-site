@@ -8,6 +8,8 @@ export type ProjectType = {
 	gallery: {
 		src: string
 		alt: string
+		type?: "image" | "video"
+		thumbnail?: string
 	}[]
 	paragraphs: {
 		number: number
@@ -15,6 +17,7 @@ export type ProjectType = {
 		content: string
 	}[]
 	technologies: string[]
+  tags: string[]
   released: boolean
 }
 
@@ -35,11 +38,12 @@ export const ProjectsData: ProjectType[] = [
     paragraphs: [
       { number: 1, header: "What is Hela?", content: "Hela is the first 'real' game I created. I had, of course, made games previously, but they were either not in a proper game engine, or I was just following simple tutorials to create the same as someone else. Hela is a simple 5 level game with a boss fight at the end, which was completed sometime during the covid lockdowns in 2020. The player has a first-person view of a character who can summon and throw swords to defeat enemies. The aim of the game is to just make it to the end door of each level with a new monster, with various abilities and attributes, being on each of the 5 levels." },
       { number: 2, header: "My Introduction to Game Creation", content: "This goes allllll the way back to primary school; we used to have 1 hour a week focussed on computer skills. Naturally, we have scratch, how to use the file explorer, etc. But my most favourite topic we covered was Kodu Game Lab. For those unaware, it's a game engine of sorts that uses blocks to create game logic, similar to scratch! I remember going home, making new games in it, and bringing them in on a USB to show my teacher. Looking back, I feel very lucky to have had a computer class this early, especially on this topic which really fostered my passion. Moving on to high school the next instance of me dipping my toe into game creation was simply playing around in unity for the first time following tutorials from the legendary Asbjørn 'Brackeys' Thirslund, this set me up to make my final year project for my A-level Computer Science qualification, an evolution simulator in unity (The files have unfortunately been lost). All of this leads us to this project, the first real game!" },
-      { number: 3, header: "The game", content: "I believe the games name comes from the main antagonist of the 'Thor: Ragnarok' Film, as cringey as that is. Hela is a god who can summon and throw swords, so the name is a bit on the nose. There is no real story to the game visible to the user, but the idea was that a town was taken over by a dark wizard, who features as the final boss. This project was quite difficult, as I had no modelling experience, finding and fitting random assets from the Unity Asset Store was time consuming and frustrating, leading to a lot of compromises in the final build. I also had no individual C# experience, only python at the time. However, I LOVE learning new technologies, and excel at rapid progression, making this project ideal to garnering motivation in me."},
+      { number: 3, header: "The game", content: "I believe the games name comes from the main antagonist of the 'Thor: Ragnarok' Film, as cringey as that is. Hela is a god who can summon and throw swords, so the name is a bit on the nose. There is no real story to the game visible to the user, but the idea was that a town was taken over by a dark wizard, who features as the final boss. This project was quite difficult, as I had no modelling experience, finding and fitting random assets from the Unity Asset Store was time consuming and frustrating, leading to a lot of compromises in the final build. I also had no individual C# experience, only python at the time. However, I LOVE learning new technologies, and excel at rapid progression, making this project ideal to garnering motivation in me." },
       { number: 4, header: "Conclusion & Reflection", content: "As you can tell from the screenshots, the game is very obviously unpolished but considering I had not made anything like it before, I am proud of it. Since the completion of the game, I have made more projects in unity, which you can see on the other projects featured on this website, as of the time of writing this, I'm currently working on learning blender so that I can make my own assets may be homogenous. I have however switched my focus to Godot for personal projects after the Unity pricing controversy of 2023." },
     ],
     technologies: ["Unity", "C#"],
-    released: true
+    released: true,
+    tags: ["Game Development", "Unity", "C#"]
   },
 	{
     id: 2,
@@ -61,10 +65,33 @@ export const ProjectsData: ProjectType[] = [
       { number: 4, header: "Conclusion & Reflection", content: "The game expectedly had very few downloads from the public, likely because the game did have accessibility issues, and no marketing or prior work. The game was however well received when I showed family and friends, with them competing to get the highest score, exactly what I had hoped for! Because of this, I considered my project successful. Unfortunately, the original unity files have been lost so I cannot go back and fix issues that I previously mentioned." },
     ],
     technologies: ["Unity", "C#"],
-    released: true
+    released: true,
+    tags: ["Game Development", "Mobile", "Unity", "C#"]
+  },
+  {
+    id: 3,
+    title: "AI Spam Detection",
+    thumbnailSrc: "/project-images/final-year-project/confusion-matrix.png",
+    thumbnailAlt: "Confusion matrix showing the results of the project",
+    shortDescription: "Spam detection using NLP techniques and machine learning models. Created for my final year university project.",
+    Company: "Personal",
+    gallery: [
+      { src: "/project-images/final-year-project/confusion-matrix.png", alt: "Confusion matrix showing the results of the project" },
+      { src: "/project-images/final-year-project/length-analysis.png", alt: "Length analysis of the dataset" },
+      { src: "/project-images/final-year-project/rf.png", alt: "Random forest model architecture" },
+      { src: "/project-images/final-year-project/svcs.png", alt: "SVC types and their architecture" },
+    ],
+    paragraphs: [
+      { number: 1, header: "Why This Project Area?", content: "I am writing this two years in retrospect so some details may be missing or brief. This was the final year project I completed for my degree at Edge Hill University. I graduated in 2024 which meant that two years earlier ChatGPT was released with the GPT-3.5 model, often cited as the beginning of the AI boom. Because of this I felt I would be disadvantaged by not having some kind of AI project for my third-year project, and it was, at the time, something knew to learn which would be both fun and a real challenge. I also loved doing the cyber security modules at university, so I tried to combine both these areas, specifically phishing and spam emails. This lead to a rather funnily long title \"Using Machine Learning to Detect Phishing Email Attacks to Overcome the Flaws of Traditional Spam Filters\"." },
+      { number: 2, header: "Abstract", content: "Harry from 2024 would know more about this than me, so ill let him explain with the abstract. \"Phishing email attacks represent a significant amount of the threat in the cyber security landscape, vulnerable individuals and organisations are at risk due to human error in recognition of social engineering techniques and flaws with current phishing detectors such as traditional spam filters which rely on predominantly trigger words for detection. A thorough literature review creates a basis to expand upon existing knowledge analysing the existing methods of evaluation and the current state-of-the-art. This project explored the use of machine learning techniques and the natural language processing tool BERT for creating representations of semantic meaning, while implementing a pragmatic approach to model training. The model is evaluated with industry standard metrics and compared to other studies concluding that there is evidence of some improvement amongst existing methods, with this project yielding an accuracy and recall of approximately 98%. The model has also been integrated into a piece of software to demonstrate how the model could be incorporated into a live application. The report also provides insight into future work on how this model could be improved to increase its performance metrics.\"" },
+      { number: 3, header: "Presentation", content: "I went on to present my project at the 2024 computer science end of year project showcase, wherein we got to show off our projects to the entire department and defend our findings and methodology. If you would like to read the whole report, click [here](/final-year-project.pdf). I received a first-class mark for this project, achieving a first overall grade for my three years at Edge Hill." },
+    ],
+    technologies: ["Unity", "C#"],
+    released: true,
+    tags: ["Python", "AI"]
   },
 	{
-    id: 3,
+    id: 4,
     title: "Untitled Horror Game",
     thumbnailSrc: "/project-images/horror-game/in-game.jpg",
     thumbnailAlt: "A dark and eerie road with flickering lights.",
@@ -82,10 +109,11 @@ export const ProjectsData: ProjectType[] = [
       { number: 3, header: "Conclusion & Reflection", content: "Although the visual changes I made were effective there were still some difficulties in finding suitable assets. I did like the overall feel of the game and planned on making another longer, more fleshed out horror game. Unfortunately, this would be the last game I made for a while due to university and professional work occupying more time." },
     ],
     technologies: ["Unity", "C#"],
-    released: true
+    released: true,
+    tags: ["Game Development", "Godot", "GDScript"]
   },
 	{
-    id: 4,
+    id: 5,
     title: "Computer Vision Damage Detection",
     thumbnailSrc: "/project-images/smart-meters/cnnarchitecture.png",
     thumbnailAlt: "A diagram showing a branched CNN architecture.",
@@ -104,10 +132,11 @@ export const ProjectsData: ProjectType[] = [
       { number: 4, header: "Outcome", content: "The images and result were passed through to each other using an API, as well as logged on the server the model ran on. This showed both office and warehouse staff the results in real time. This project massively improved warehouse efficiency allowing staff to parallelise the meter triage process. The project also became the basis of future  machine vision classification tasks." },
     ],
     technologies: ["Python", "Pytorch", "Convolutional Neural Networks", "Flask"],
-    released: true
+    released: true,
+    tags: ["Computer Vision", "AI", "Python",]
   },
 	{
-    id: 5,
+    id: 6,
     title: "VR Training Simulator",
     thumbnailSrc: "/project-images/vr-training/training-sim.png",
     thumbnailAlt: "A 'White-box' style VR training environment game screenshot",
@@ -125,10 +154,11 @@ export const ProjectsData: ProjectType[] = [
       { number: 3, header: "Outcome", content: "The whole project took less than a week to complete thanks to Godot simplicity. Unfortunately, while management showed interest in the project it never came to fruition due to the required investment into VR technology, the additional training required to have a staff member train another in VR, and health and safety requirements compared to the current process." },
     ],
     technologies: ["Godot", "GDScript", "Virtual Reality"],
-    released: true
+    released: true,
+    tags: ["VR", "Godot", "GDScript", "Game Development"]
   },
   {
-    id: 6,
+    id: 7,
     title: "Part Identification App",
     thumbnailSrc: "/project-images/parts-app/main.jpg",
     thumbnailAlt: "A mobile app interface showing placeholder with prompts to enter an image or take a photo.",
@@ -146,10 +176,11 @@ export const ProjectsData: ProjectType[] = [
       { number: 3, header: "Outcome", content: "This solution vastly improved upon the old system speeding the recognition of unknown items as described, freeing up time, and manpower. Unfortunately, a better version of the app could not be developed due to the AR4 project which you can also see on this site. " },
     ],
     technologies: ["Godot", "GDScript", "Flask", "FastAI"],
-    released: true
+    released: true,
+    tags: ["Computer Vision", "Mobile Development", "AI", "Godot", "Python"]
   },
 	{
-    id: 7,
+    id: 8,
     title: "AR4 Robotic Arm",
     thumbnailSrc: "/project-images/ar4/shot.jpg",
     thumbnailAlt: "A robotic arm picking up an object.",
@@ -168,10 +199,11 @@ export const ProjectsData: ProjectType[] = [
       { number: 4, header: "End of My Time at TVS SCS", content: "I made some simple scripts that allowed me to control the arm with ROS2 and was making headway in developing a model to recognise a variety of objects in the warehouse. Unfortunately, this work would never make it to a finished PoC stage. TVS SCS did not meet the profit quota for the quarter, this meant that some budget cuts had to take place. As the team I worked on was R&D focussed, the team was to be cut from 8 people to 3. Having started sooner than the others, with less knowledge of the business, I was made redundant." },
     ],
     technologies: ["Robotics", "OpenCV", "Linux", "ROS2"],
-    released: true
+    released: true,
+    tags: ["Hardware", "Computer Vision", "Linux", "OpenCV",]
   },
 	{
-    id: 8,
+    id: 9,
     title: "Finance Website",
     thumbnailSrc: "/project-images/finance-website/dash.png",
     thumbnailAlt: "Screenshot of the finance website's homepage.",
@@ -189,10 +221,11 @@ export const ProjectsData: ProjectType[] = [
       { number: 3, header: "The Project Itself", content: "While I had not been there from the beginning of the project, this iteration of work for me was focussed on rebuilding the front-end design of a finance website. The company targeted small personal companies, such as local tradesmen, or restaurateurs, to help improve their finances and knowledge around it. For them I had to produce a variety of pages as a part of a small team of 3 people, with me focussing on front-end and them the back-end. This was also a big shift in workflow for me from my previous job. Having people developing alongside me and then having to present that to a client, was daunting but exciting. These were really people's business, so the work I did has an impact, previously unseen in my last role." },
     ],
     technologies: ["NextJS", "Tailwind", "Storybook", "Git", "TypeScript"],
-    released: true
+    released: true,
+    tags: ["Web Development", "Next.js", "TypeScript", "Tailwind CSS"]
   },
   {
-    id: 9,
+    id: 10,
     title: "CesiumJS Bermuda & Liverpool",
     thumbnailSrc: "/project-images/cesiumjs/hamilton.png",
     thumbnailAlt: "A 3D map of Bermuda using CesiumJS.",
@@ -209,10 +242,11 @@ export const ProjectsData: ProjectType[] = [
       { number: 2, header: "Adapting Meta Liverpool", content: "The VEC also has an ongoing project called 'Meta Liverpool', a digital twin inside of unreal engine that uses pixel streaming. This can be used for areas such as town planning by looking at traffic simulation or solar panel placement. I decided to make a version of this in CesiumJS that is runnable in a browser, this way it was more distributable to clients. " },
     ],
     technologies: ["JavaScript", "CesiumJS"],
-    released: true
+    released: true,
+    tags: ["Web Development"]
   },
 	{
-    id: 10,
+    id: 11,
     title: "Portfolio Site",
     thumbnailSrc: "/project-images/portfolio-site/home.png",
     thumbnailAlt: "A screenshot of the portfolio website homepage.",
@@ -232,6 +266,7 @@ export const ProjectsData: ProjectType[] = [
       { number: 3, header: "What's Next? (Dev Log)", content: "(03/01/25) As of writing I'm nearing the final commit for a V1.0 version of this website, just a few text edits to go! I made this website within the two-week university closure, so development will slow down as I return to work, but I still have a few plans on my Todo list: Find a way to link and style in the paragraphs | Add series, i.e. game dev series, Robot series etc. | Filter projects by technology used | Add videos to the gallery. Thank you for taking the time to visit my website and read some projects, it means a lot this effort has not gone to waste :)" },
     ],
     technologies: ["NextJS", "Tailwind", "Storybook", "Git", "TypeScript"],
-    released: true
+    released: true,
+    tags: ["Web Development", "Next.js", "TypeScript", "Tailwind CSS"]
   }
 ]

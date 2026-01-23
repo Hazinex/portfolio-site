@@ -3,11 +3,13 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import Image from "next/image"
-import { useEffect, useState, useCallback } from "react"
+import { useEffect, useState, useCallback, useRef } from "react"
 
-type Image = {
+type GalleryItem = {
   src: string
   alt: string
+  type?: "image" | "video"
+  thumbnail?: string
 }
 
 export function GalleryLightbox({
@@ -15,11 +17,12 @@ export function GalleryLightbox({
   startIndex = 0,
   onClose,
 }: {
-  images: Image[]
+  images: GalleryItem[]
   startIndex?: number
   onClose: () => void
 }) {
   const [index, setIndex] = useState(startIndex)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   const prev = useCallback(() => {
     setIndex((i) => (i - 1 + images.length) % images.length)
@@ -50,7 +53,7 @@ export function GalleryLightbox({
         exit={{ opacity: 0 }}
         onClick={onClose}
       >
-        {/* Image container */}
+        {/* Image/Video container */}
         <motion.div
           className="relative max-w-[90vw] max-h-[90vh]"
           initial={{ scale: 0.95, opacity: 0 }}
@@ -66,14 +69,24 @@ export function GalleryLightbox({
             if (info.offset.x < -20) next()
           }}
         >
-          <Image
-            src={images[index].src}
-            alt={images[index].alt}
-            height={1500}
-            width={1500}
-            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
-            draggable={false}
-          />
+          {images[index].type === "video" ? (
+            <video
+              ref={videoRef}
+              src={images[index].src}
+              controls
+              autoPlay
+              className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+            />
+          ) : (
+            <Image
+              src={images[index].src}
+              alt={images[index].alt}
+              height={1500}
+              width={1500}
+              className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+              draggable={false}
+            />
+          )}
 
           {/* Image counter */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 text-sm">
