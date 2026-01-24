@@ -1,7 +1,6 @@
-import { ProjectCard } from "@/components/project-card"
-import { ProjectsData } from "@/lib/projectData"
+import { MainProjectsData, MiniProjectsData } from "@/lib/projectData"
+import { ProjectTabs } from "@/components/project-tabs"
 import { CompanyData } from "@/lib/companyData"
-import { slugify } from "@/lib/utils"
 import { getLogo } from "@/lib/utils"
 import { Sansation } from "next/font/google"
 import Image from "next/image"
@@ -23,6 +22,7 @@ export default function Projects() {
 					<div className="items-center animate-fly-right">
 						<h1 className={`pt-12 pl-6 md:pl-12 pb-4 text-3xl font-bold ${sansation.className}`}>Projects</h1>
 						<p className="px-6 md:pl-12 pb-6 md:pr-6 text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies.<br /> Each project highlights different skills, tools, and scanarios.</p>
+						<p className="px-6 md:pl-12 pb-6 md:pr-6 text-muted-foreground">You can swap between seeing my main projects and smaller mini projects that I think are worth mentioning, but are on a smaller scale to my main ones.</p>
 						<p className="pl-6 md:pl-12 md:pb-12 md:pr-6 text-muted-foreground">Click each project to learn more.</p>
 					</div>
 					<div className="md:ml-auto md:pt-12 pr-6 md:pr-12 items-center animate-fly-left">
@@ -46,27 +46,8 @@ export default function Projects() {
 					</div>
 				</section>
 				<hr className="mt-8 mb-8 mx-4 md:mx-32 animate-fly-up" />
+				<ProjectTabs MainProjectsData={MainProjectsData} MiniProjectsData={MiniProjectsData} />
 			</div>
-			<section className="max-w-screen-2xl mx-auto px-6 mb-8">
-				<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{ProjectsData
-          .filter(project => project.released)
-          .slice()
-          .reverse()
-          .map((project, index) => (
-						<ProjectCard
-							key={project.id}
-							title={project.title}
-							href={`projects/${slugify(project.title)}`}
-							imageSrc={project.thumbnailSrc}
-							imageAlt={project.thumbnailAlt}
-							shortDescription={project.shortDescription}
-							Company={project.Company}
-              delay={index * 0.1 + 0.5}
-						/>
-					))}
-				</div>
-			</section>
 		</>
 	)
 }

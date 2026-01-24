@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { ProjectsData } from "@/lib/projectData"
+import { MainProjectsData, MiniProjectsData } from "@/lib/projectData"
 import { slugify } from "@/lib/utils"
 import { ProjectGallery } from "@/components/gallery"
 import { Sansation } from "next/font/google"
@@ -8,6 +8,8 @@ import { BackButton } from "@/components/ui/back-button"
 import ReactMarkdown from "react-markdown"
 
 const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-sansation', fallback: ['system-ui'] })
+
+const ProjectsData = [...MainProjectsData, ...MiniProjectsData]
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }

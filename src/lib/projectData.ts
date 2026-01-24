@@ -21,7 +21,7 @@ export type ProjectType = {
   released: boolean
 }
 
-export const ProjectsData: ProjectType[] = [
+export const MainProjectsData: ProjectType[] = [
 	{
     id: 1,
     title: "Hela",
@@ -269,4 +269,75 @@ export const ProjectsData: ProjectType[] = [
     released: true,
     tags: ["Web Development", "Next.js", "TypeScript", "Tailwind CSS"]
   }
+]
+
+export const MiniProjectsData: ProjectType[] = [
+	{
+    id: 1,
+    title: "Retro-Pie",
+    thumbnailSrc: "/project-images/templateProjectImg.jpg",
+    thumbnailAlt: "",
+    shortDescription: "",
+    Company: "Personal",
+    gallery: [
+      { src: "", alt: "" },
+    ],
+    paragraphs: [
+      { number: 1, header: "", content: "" },
+    ],
+    technologies: [],
+    released: true,
+    tags: []
+  },
+  {
+    id: 2,
+    title: "Student Managment System",
+    thumbnailSrc: "/project-images/templateProjectImg.jpg",
+    thumbnailAlt: "",
+    shortDescription: "",
+    Company: "Personal",
+    gallery: [
+      { src: "", alt: "" },
+    ],
+    paragraphs: [
+      { number: 1, header: "", content: "" },
+    ],
+    technologies: [],
+    released: true,
+    tags: []
+  },
+  {
+    id: 3,
+    title: "Snapchat Parser",
+    thumbnailSrc: "/project-images/templateProjectImg.jpg",
+    thumbnailAlt: "",
+    shortDescription: "",
+    Company: "Personal",
+    gallery: [
+      { src: "", alt: "" },
+    ],
+    paragraphs: [
+      { number: 1, header: "", content: "" },
+    ],
+    technologies: [],
+    released: true,
+    tags: []
+  },
+  {
+    id: 4,
+    title: "Pi-Hole",
+    thumbnailSrc: "/project-images/templateProjectImg.jpg",
+    thumbnailAlt: "",
+    shortDescription: "",
+    Company: "Personal",
+    gallery: [
+      { src: "", alt: "" },
+    ],
+    paragraphs: [
+      { number: 1, header: "", content: "" },
+    ],
+    technologies: [],
+    released: true,
+    tags: []
+  },
 ]

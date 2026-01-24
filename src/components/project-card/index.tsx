@@ -10,14 +10,15 @@ interface ProjectCardProps {
 	shortDescription?: string;
 	href: string;
 	Company: "Personal" | "TVS" | "VEC";
-  delay: number
+  delay: number;
+  shouldAnimate?: boolean;
 }
 
-function ProjectCard({ title, href, imageSrc, imageAlt, shortDescription, Company, delay }: ProjectCardProps) {
+function ProjectCard({ title, href, imageSrc, imageAlt, shortDescription, Company, delay, shouldAnimate = true }: ProjectCardProps) {
 	return (
 		<Link
 			href={href}
-			className={`block border rounded-xl bg-card p-4 hover:scale-105 transform transition-transform duration-300 ease-in-out animate-fly-up opacity-0`}
+			className={`block border rounded-xl bg-card p-4 hover:scale-105 transform transition-transform duration-300 ease-in-out ${shouldAnimate ? 'animate-fly-up opacity-0' : ''}`}
       style={{ animationDelay: `${delay}s`, animationFillMode: 'forwards' }}
 		>
 			<div className="relative w-full h-48 md:h-56 lg:h-48 rounded overflow-hidden">
