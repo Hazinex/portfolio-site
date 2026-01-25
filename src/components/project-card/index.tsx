@@ -30,14 +30,7 @@ function ProjectCard({ title, href, imageSrc, imageAlt, shortDescription, Compan
 					className="object-cover w-full h-full rounded-t-lg group-hover:scale-110 origin-top transition-transform duration-300 ease-in-out"
 				/>
 				<div
-					className="
-						pointer-events-none
-						absolute inset-0
-						bg-linear-to-t from-black/70 via-black/30 to-transparent
-						opacity-0
-						group-hover:opacity-100
-						transition-opacity duration-300 ease-in-out
-					"
+					className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
 				/>
 			</div>
 			<div className="p-4">
