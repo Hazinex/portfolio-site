@@ -26,10 +26,10 @@ function ProjectTabs({ MainProjectsData, MiniProjectsData }: ProjectTabsProps) {
     <>
       <section className="max-w-screen-2xl mx-auto px-6 mb-8">
         <div className='flex my-4 mb-8 gap-4'>
-          <Button variant={'ghost'} size={'sm'} className={activeTab === 'main' ? 'relative border-b-8 border-accent animate-fly-up' : 'animate-fly-up'} onClick={() => handleTabChange('main')}>
+          <Button variant={'ghost'} size={'sm'} className={activeTab === 'main' ? 'relative md:border-b-8 md:border-accent animate-fly-up bg-accent md:bg-background' : 'animate-fly-up'} onClick={() => handleTabChange('main')}>
             Main Projects
           </Button>
-          <Button variant={'ghost'} size={'sm'} className={activeTab === 'mini' ? 'relative border-b-8 border-accent animate-fly-up' : 'animate-fly-up'} onClick={() => handleTabChange('mini')}>
+          <Button variant={'ghost'} size={'sm'} className={activeTab === 'mini' ? 'relative md:border-b-8 md:border-accent animate-fly-up bg-accent md:bg-background' : 'animate-fly-up'} onClick={() => handleTabChange('mini')}>
             Mini Projects
           </Button>
         </div>
