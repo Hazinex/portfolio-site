@@ -56,8 +56,8 @@ function ProjectTabs({ MainProjectsData, MiniProjectsData }: ProjectTabsProps) {
   return (
     <>
       <section className="max-w-screen-2xl mx-auto px-6 mb-8">
-        <div className='flex my-8 items-center'>
-          <div className='flex gap-4 items-center'>
+        <div className='flex flex-col md:flex-row my-8 items-center'>
+          <div className='flex gap-4 mr-auto items-center'>
             <Button variant={'ghost'} size={'sm'} className={activeTab === 'main' ? 'relative md:border-b-8 md:border-accent animate-fly-up bg-accent md:bg-background' : 'animate-fly-up'} onClick={() => handleTabChange('main')}>
               Main Projects
             </Button>
@@ -65,7 +65,7 @@ function ProjectTabs({ MainProjectsData, MiniProjectsData }: ProjectTabsProps) {
               Mini Projects
             </Button>
           </div>
-          <div className='flex ml-auto'>
+          <div className='flex mr-auto md:mr-0 mt-4 md:mt-0 md:ml-auto'>
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant={'secondary'} size={'sm'} className='relative animate-fly-up'>
@@ -73,14 +73,14 @@ function ProjectTabs({ MainProjectsData, MiniProjectsData }: ProjectTabsProps) {
                   <Funnel className='ml-2 h-4 w-4' />
                 </Button>
               </DialogTrigger>
-              <DialogContent className='max-w-md'>
+              <DialogContent className='w-[94vw] md:max-w-lg'>
                 <DialogHeader>
                   <DialogTitle>Filters</DialogTitle>
                   <DialogDescription>
                     Filter projects by company or the tag.
                   </DialogDescription>
                 </DialogHeader>
-                <div className="mt-4">
+                <div className="mt-4 overflow-y-auto max-h-[50vh] px-1">
                   <p className="text-sm text-muted-foreground">Company</p>
                   <div className="mt-2 space-y-2">
                     {Array.from(new Set(projectsData.map(p => p.Company))).map(company => (
@@ -109,7 +109,7 @@ function ProjectTabs({ MainProjectsData, MiniProjectsData }: ProjectTabsProps) {
                     ))}
                   </div>
                   <FieldSeparator className="my-4" />
-                  <Button asChild variant="default" className="w-full">
+                  <Button asChild variant="default" className="w-full mb-4">
                     <DialogTrigger>
                       Close
                     </DialogTrigger>
