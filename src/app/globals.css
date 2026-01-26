@@ -143,10 +143,6 @@
 }
 
 html {
-  scrollbar-gutter: stable;
-}
-
-html {
   scrollbar-width: thin;
   scrollbar-color: var(--muted-foreground) #0a0a0a;
 }

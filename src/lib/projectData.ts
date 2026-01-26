@@ -4,7 +4,7 @@ export type ProjectType = {
 	thumbnailSrc: string;
 	thumbnailAlt: string;
 	shortDescription: string;
-	Company: "Personal" | "TVS" | "VEC";
+	Company: "Personal" | "EHU" | "TVS" | "VEC";
 	gallery: {
 		src: string
 		alt: string
@@ -30,10 +30,10 @@ export const MainProjectsData: ProjectType[] = [
     shortDescription: "5 Level Game made in Unity using C#.",
     Company: "Personal",
     gallery: [
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/hela-video.mp4", alt: "Gamplay of Helas first two levels", type: "video", thumbnail: "/project-images/hela/mainmenu.png" },
       { src: "/project-images/hela/lvl2.png", alt: "Zombie jumping towards the camera in a dimly lit room." },
       { src: "/project-images/hela/lvl3.png", alt: "Troll silhouette in a cave." },
       { src: "/project-images/hela/lvl5.png", alt: "Large hooded and cloaked figure holding a wooden staff casting a spell." },
-      { src: "/project-images/hela/mainmenu.png", alt: "Main menu showing a tree and mountain range with menu options." },
     ],
     paragraphs: [
       { number: 1, header: "What is Hela?", content: "Hela is the first 'real' game I created. I had, of course, made games previously, but they were either not in a proper game engine, or I was just following simple tutorials to create the same as someone else. Hela is a simple 5 level game with a boss fight at the end, which was completed sometime during the covid lockdowns in 2020. The player has a first-person view of a character who can summon and throw swords to defeat enemies. The aim of the game is to just make it to the end door of each level with a new monster, with various abilities and attributes, being on each of the 5 levels." },
@@ -53,7 +53,7 @@ export const MainProjectsData: ProjectType[] = [
     shortDescription: "Hyper-casual mobile game made in Unity using C#.",
     Company: "Personal",
     gallery: [
-      { src: "/project-images/bouncy-platforms/menu.jpg", alt: "Main menu of bouncy platforms" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/bouncy-platforms-video.mp4", alt: "Video of Bouncy Platforms gameplay", type: "video", thumbnail: "/project-images/bouncy-platforms/menu.jpg"},
       { src: "/project-images/bouncy-platforms/game.jpg", alt: "gameplay of bouncy platforms" },
       { src: "/project-images/bouncy-platforms/fail.jpg", alt: "game over screen of bouncy platforms" },
       { src: "/project-images/bouncy-platforms/banner.png", alt: "Banner from APK index website for the game" },
@@ -98,7 +98,7 @@ export const MainProjectsData: ProjectType[] = [
     shortDescription: "A first-person horror game prototype made in the Godot Engine and GDScript.",
     Company: "Personal",
     gallery: [
-      { src: "/project-images/horror-game/start.png", alt: "Mock camera UI over a dimly lit street" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/horror-video.mp4", alt: "Gameplay of the horror game", type: "video", thumbnail: "/project-images/horror-game/start.png" },
       { src: "/project-images/horror-game/bins.png", alt: "Mock camera UI over an image of some bins" },
       { src: "/project-images/horror-game/in-game.jpg", alt: "Mock camera UI over another in-game shot" },
       { src: "/project-images/horror-game/lights-out.png", alt: "Mock camera UI over a section of the game in which the lights suddenly cut out" },
@@ -143,7 +143,7 @@ export const MainProjectsData: ProjectType[] = [
     shortDescription: "A VR training simulator for smart meter triage using the Godot Engine and GDScript.",
     Company: "TVS",
     gallery: [
-      { src: "/project-images/vr-training/training-sim.png", alt: "A VR hand reaching for a handle on a box" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/vr-sim-video.mp4", alt: "Video of VR training simulator gameplay", type: "video", thumbnail: "/project-images/vr-training/training-sim.png" },
       { src: "/project-images/vr-training/open-box.png", alt: "The user putting a smart meter in the now open box" },
       { src: "/project-images/vr-training/result.png", alt: "The mock result of the damage detector" },
       { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
@@ -187,8 +187,8 @@ export const MainProjectsData: ProjectType[] = [
     shortDescription: "Pick and place robotic arm controlled using computer vision object detection and classification.",
     Company: "TVS",
     gallery: [
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/ar4-video.mp4", alt: "Video of the AR4 robotic arm in action", type: "video", thumbnail: "/project-images/ar4/warehouse.jpg"},
       { src: "/project-images/ar4/shot.jpg", alt: "Pick and place robotic arm controlled using computer vision object detection and classification." },
-      { src: "/project-images/ar4/warehouse.jpg", alt: "Robotic arm sorting items in a warehouse" },
       { src: "/project-images/blanks/no-image-3.png", alt: "This project has less than 4 images, this is a filler image" },
       { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
     ],
@@ -268,76 +268,131 @@ export const MainProjectsData: ProjectType[] = [
     technologies: ["NextJS", "Tailwind", "Storybook", "Git", "TypeScript"],
     released: true,
     tags: ["Web Development", "Next.js", "TypeScript", "Tailwind CSS"]
-  }
+  },
+  {
+    id: 12,
+    title: "ESP32 Climate Monitor",
+    thumbnailSrc: "",
+    thumbnailAlt: "",
+    shortDescription: "My experience learning microcontroller development and making an ESP32 room climate monitor",
+    Company: "Personal",
+    gallery: [
+      { src: "", alt: "" },
+    ],
+    paragraphs: [
+      { number: 1, header: "", content: "" },
+    ],
+    technologies: [],
+    released: false,
+    tags: []
+  },
 ]
 
 export const MiniProjectsData: ProjectType[] = [
 	{
     id: 1,
     title: "Retro-Pie",
-    thumbnailSrc: "/project-images/templateProjectImg.jpg",
+    thumbnailSrc: "/project-images/retro-pie/splash.jpg",
     thumbnailAlt: "",
-    shortDescription: "",
+    shortDescription: "Creating a Retro-Pie to emulate the Sega Megadrive",
     Company: "Personal",
     gallery: [
-      { src: "", alt: "" },
+      { src: "/project-images/retro-pie/splash.jpg", alt: "Retro-Pie game splash screen showing a Sega Megadrive" },
+      { src: "/project-images/retro-pie/boot.jpg", alt: "Retro-Pie boot screen" },
+      { src: "/project-images/retro-pie/controller.jpg", alt: "Raspberry Pi and Sega Megadrive controller" },
+      { src: "/project-images/retro-pie/games.jpg", alt: "List of Sonic games for the Sega Megadrive" },
+      { src: "/project-images/retro-pie/lvl1.jpg", alt: "Level 1 of the original Sonic" },
+      { src: "/project-images/retro-pie/pass.jpg", alt: "Completion of the first level" },
     ],
     paragraphs: [
-      { number: 1, header: "", content: "" },
+      { number: 1, header: "Tech for Christmas", content: "I'd always been captivated by Raspberry Pis and Linux distros, but I never knew what to do with them, and didn't have any experience with electronics. This project is as simple as it gets it doesn't use any GPIO pins, just basically using the Pi as a small form factor computer. My mum had always said she loved playing on her Sega Megadrive as a kid, specifically the Sonic games. I had checked to look to see if I could find the console in places like CeX, but understandably, they were all in poor condition, not fit for a Christmas gift. After some researching I came across the [Retro-Pie Project](https://retropie.org.uk/). It can be configured to play many game ROMs from many retro consoles, perfect to make my mums Megadrive! Installation was simple enough, and it made a really unique Christmas gift, fit with a Megadrive controller, that my mum adored!" },
     ],
-    technologies: [],
+    technologies: ["Microcontrollers", "Linux"],
     released: true,
-    tags: []
+    tags: ["Microcontrollers", "Linux"]
   },
   {
     id: 2,
     title: "Student Managment System",
-    thumbnailSrc: "/project-images/templateProjectImg.jpg",
-    thumbnailAlt: "",
-    shortDescription: "",
-    Company: "Personal",
+    thumbnailSrc: "/project-images/student-management-system/all-screens.png",
+    thumbnailAlt: "Screens created for the student management system",
+    shortDescription: "Java based project I complete for a second year Object Orientated Programming module",
+    Company: "EHU",
     gallery: [
-      { src: "", alt: "" },
+      { src: "/project-images/student-management-system/all-screens.png", alt: "Screens created for the student management system" },
+      { src: "/project-images/student-management-system/activity.png", alt: "UML activity diagram" },
+      { src: "/project-images/student-management-system/class.png", alt: "UML class diagram" },
+      { src: "/project-images/student-management-system/module.png", alt: "The module screen of the application" },
+      { src: "/project-images/student-management-system/student.png", alt: "The student screen of the application" },
+      { src: "/project-images/student-management-system/use-case.png", alt: "Diagram showing the user cases of the application" },
     ],
     paragraphs: [
-      { number: 1, header: "", content: "" },
+      { number: 1, header: "A Java GUI Project", content: "Before this module, I didn't have much experience, and the project at hand was quite the trial by fire, compounded by my lack of knowledge in Java and the need for a GUI when I had extremely little front-end knowledge. We were tasked to create a project from a set list that focussed on object orientated principles and document the process with a 6-week deadline. I opted for the Student Management System as it made the most sense out of the list and had clear real world to data object mapping. The Report had us documenting every part of the [software development life-cycle]( https://en.wikipedia.org/wiki/Systems_development_life_cycle) and creating [UML diagrams]( https://en.wikipedia.org/wiki/Unified_Modeling_Language). " },
     ],
-    technologies: [],
+    technologies: ["Java"],
     released: true,
-    tags: []
+    tags: ["Java"]
   },
   {
     id: 3,
     title: "Snapchat Parser",
-    thumbnailSrc: "/project-images/templateProjectImg.jpg",
-    thumbnailAlt: "",
-    shortDescription: "",
-    Company: "Personal",
+    thumbnailSrc: "/project-images/snapchat-parser/text.png",
+    thumbnailAlt: "Text conversation from a fake snapchat chat export",
+    shortDescription: "Software I made while on placement at Lancashire Constabulary to parse Snapchat data for digital forensic investigators",
+    Company: "EHU",
     gallery: [
-      { src: "", alt: "" },
+      { src: "/project-images/snapchat-parser/text.png", alt: "Text conversation from a fake snapchat chat export" },
+      { src: "/project-images/snapchat-parser/chats.png", alt: "List of chats represented as sheets" },
+      { src: "/project-images/blanks/no-image-3.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
     ],
     paragraphs: [
-      { number: 1, header: "", content: "" },
+      { number: 1, header: "Lancashire Constabulary Placement", content: "As part of my year 2 employability module at university I had the option to complete a place with the Digital Media Investigations Unit. This was a really exciting opportunity and one I wont forget, being shown behind the scenes of how my area of passion is being used for good." },
+      { number: 2, header: "The Software", content: "As part of my placement, I was asked to make a simple python script that takes a snapchat chat export and loads it in an easily readable format in excel for investigators to review. Each sheet on the excel file represented a chat with one other user, in time order. Snapchat chat exports come in a horrible format, they are Json files, but they are listed as only objects which are: **ALL** sent messages (yes, from every chat and group chat in time order, which mixed the chats together), **ALL** received messages, then **ALL** sent messages that had been saved by clicking on the message, and finally **ALL** received saved messages. This is laughably poor, and a real pain for investigators. You may be wondering why they could not just read the chats on the phone. There are two main reasons, 1. A contact on the phone could delete their messages, and 2. Reading the chats technically changes the data, making the evidence inadmissible. So a snapshot of the data must be taken, Ie. The export." },
     ],
-    technologies: [],
+    technologies: ["Python"],
     released: true,
-    tags: []
+    tags: ["Python"]
   },
   {
     id: 4,
     title: "Pi-Hole",
-    thumbnailSrc: "/project-images/templateProjectImg.jpg",
-    thumbnailAlt: "",
-    shortDescription: "",
+    thumbnailSrc: "/project-images/pi-hole/pihole-dashboard.png",
+    thumbnailAlt: "pi-hole dashboard showing quantities of blocked traffic",
+    shortDescription: "DNS Level ad-blocker using a Raspberry Pi",
     Company: "Personal",
     gallery: [
-      { src: "", alt: "" },
+      { src: "/project-images/pi-hole/pihole-dashboard.png", alt: "pi-hole dashboard showing quantities of blocked traffic" },
+      { src: "/project-images/blanks/no-image-2.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/blanks/no-image-3.png", alt: "This project has less than 4 images, this is a filler image" },
+      
     ],
     paragraphs: [
-      { number: 1, header: "", content: "" },
+      { number: 1, header: "YouTube Ads", content: "I started this project in response to YouTubes crackdown on adblockers. Before mid-2023 ad-blockers were sufficient in blocking ads on YouTube, this was just before Google started experimenting a *Three strike rule* for using an adblocker, where it would stop playing videos if you didn't remove the adblocker. This escalated with the announcement of 'Manifest V3', a major update which prevented traditional adblockers from updating filtering rules in real-time, effectively killing ad blockers for google services. This is where the 'Pi-Hole' comes in." },
+      { number: 2, header: "What is a Pi-Hole?", content: "Pi-Hole is an ad-blocker than unlike extensions operates at the DNS level. Acting as a DNS itself as a proxy. It contains a blacklist of known DNSs that are used for Ads. When a browser retrieved a page, it makes a request to the YouTube video DNS *and* the DNS the ad is on. Pi-hole completely blocks the request to the ad DNS. When the ad DNS fails, YouTube just starts playing the video as normal. This worked for a time, but YouTube caught on to what people were doing, so implemented a measure called Server-side insertion, in which the ad-content would be stitched to the video stream. Making it so there is only one DNS call. While Pi-Hole is still useful on a lot of sites that have pesky ads, it is not suited to my purposes for it, but it was still a lot of fun solving this challenge with new technology." },
     ],
-    technologies: [],
+    technologies: ["Microcontrollers", "Linux"],
     released: true,
-    tags: []
+    tags: ["Microcontrollers", "Linux"]
   },
 ]
+
+// ---------------- Copy Paste Template ----------------
+// {
+//     id: 1,
+//     title: "",
+//     thumbnailSrc: "",
+//     thumbnailAlt: "",
+//     shortDescription: "",
+//     Company: "",
+//     gallery: [
+//       { src: "", alt: "" },
+//     ],
+//     paragraphs: [
+//       { number: 1, header: "", content: "" },
+//     ],
+//     technologies: [],
+//     released: false,
+//     tags: []
+//   },

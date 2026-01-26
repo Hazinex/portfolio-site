@@ -9,7 +9,7 @@ interface ProjectCardProps {
 	imageAlt?: string;
 	shortDescription?: string;
 	href: string;
-	Company: "Personal" | "TVS" | "VEC";
+	Company: "Personal" | "EHU" | "TVS" | "VEC";
   delay: number;
   shouldAnimate?: boolean;
 }
