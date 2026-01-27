@@ -233,9 +233,9 @@ export const MainProjectsData: ProjectType[] = [
     Company: "VEC",
     gallery: [
       { src: "/project-images/cesiumjs/prom.png", alt: "A 3D map of Bermuda using CesiumJS" },
-      { src: "/project-images/cesiumjs/hamilton.png", alt: "This project has less than 4 images, this is a filler image" },
-      { src: "/project-images/cesiumjs/sheil.png", alt: "This project has less than 4 images, this is a filler image" },
-      { src: "/project-images/blanks/no-image-4.png", alt: "This project has less than 4 images, this is a filler image" },
+      { src: "/project-images/cesiumjs/hamilton.png", alt: "Buildings in Hamilton, Bermuda with OSM data" },
+      { src: "/project-images/cesiumjs/sheil.png", alt: "Sheil road Liverpool, UK" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/demo.mp4", alt: "A video thumbnail for a CesiumJS demo looking at Prince's dock", type: "video", thumbnail: "/project-images/cesiumjs/video-thumbnail.png" },
     ],
     paragraphs: [
       { number: 1, header: "First Bit of Visualisation work", content: "This project involved using CesiumJS to make a 3D explorable representation of Bermuda. While I could've stopped at just adding OSM (OpenStreetMap) Buildings. I thought it worthwhile to add some additional toggleable layers that showed entities like waterways, road conditions, historical storms paths etc. This is still an on-going project, with better ariels scans in the works to increase fidelity." },
