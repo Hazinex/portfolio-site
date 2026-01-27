@@ -9,6 +9,8 @@ export function getLogo(company: string) {
   switch (company) {
     case "Personal":
       return "/company-logos/personal-logo.png";
+    case "EHU":
+      return "/company-logos/ehu-logo.png";
     case "TVS":
       return "/company-logos/tvs-logo.png";
     case "VEC":

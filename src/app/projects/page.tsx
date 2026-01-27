@@ -1,12 +1,12 @@
-import { ProjectCard } from "@/components/project-card"
-import { ProjectsData } from "@/lib/projectData"
+import { MainProjectsData, MiniProjectsData } from "@/lib/projectData"
+import { ProjectTabs } from "@/components/project-tabs"
 import { CompanyData } from "@/lib/companyData"
-import { slugify } from "@/lib/utils"
 import { getLogo } from "@/lib/utils"
 import { Sansation } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next";
+import { ScrollbarFix } from "@/components/scrollbar"
 
 export const metadata: Metadata = {
   title: "Projects - Harry Ellis",
@@ -17,54 +17,41 @@ const sansation = Sansation({ subsets: ['latin'], weight: ['400', '700'], variab
 
 export default function Projects() {
 	return (
-		<>
-			<section className="flex flex-col md:flex-row gap-20">
-				<div className="items-center animate-fly-right">
-					<h1 className={`pt-12 pl-6 md:pl-12 pb-4 text-3xl font-bold ${sansation.className}`}>Projects</h1>
-					<p className="px-6 md:pl-12 pb-6 md:pr-6 text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies.<br /> Each project highlights different skills, tools, and scanarios.</p>
-					<p className="pl-6 md:pl-12 md:pb-12 md:pr-6 text-muted-foreground">Click each project to learn more.</p>
-				</div>
-				<div className="md:ml-auto md:pt-12 pr-6 md:pr-12 items-center animate-fly-left">
-					<h2 className={`pb-4 text-3xl text-right font-bold ${sansation.className}`}>Legend</h2>
-					<p className="pl-6 text-muted-foreground justify-end text-right">Each project has a logo representing the company or organization it was created for.<br /> Below is a key and links to their websites.</p>
-					<div className="flex flex-col items-end gap-2 pt-4">
-						{CompanyData.map((company) => (
-							<div className="flex items-center gap-2" key={company.id}>
-								<Link href={company.website}>
-									<p className="text-muted-foreground text-right hover:text-foreground underline md:no-underline md:hover:underline">{company.text}</p>
-								</Link>
-								<Image
-									src={getLogo(company.name)}
-									alt={`${company.name} Logo`}
-									height={50}
-									width={50}
-								/>
-							</div>
-						))}
+		<div>
+			<ScrollbarFix />
+			<section className="max-w-screen-2xl mx-auto px-6 md:px-12 py-12">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+					<div className="md:col-span-2 animate-fly-right">
+						<h1 className={`pb-6 text-4xl font-bold ${sansation.className}`}>Projects</h1>
+						<div className="space-y-4">
+							<p className="text-muted-foreground">Below is a selection of projects I&apos;ve worked on, spanning game development, computer vision, robotics, and web technologies. Each project highlights different skills, tools, and scenarios.</p>
+							<p className="text-muted-foreground">You can swap between seeing my main projects and smaller mini projects that I think are worth mentioning, but are on a smaller scale to my main ones.</p>
+							<p className="text-muted-foreground">Click each project to learn more.</p>
+						</div>
+					</div>
+					<div className="animate-fly-left">
+						<h2 className={`pb-4 text-2xl font-bold ${sansation.className}`}>Legend</h2>
+						<p className="text-muted-foreground text-sm pb-6">Each project has a logo representing the company or organization it was created for. Below is a key and links to their websites.</p>
+						<div className="flex flex-col gap-3">
+							{CompanyData.map((company) => (
+								<div className="flex items-center gap-3" key={company.id}>
+									<Image
+										src={getLogo(company.name)}
+										alt={`${company.name} Logo`}
+										height={40}
+										width={40}
+									/>
+									<Link href={company.website}>
+										<p className="text-muted-foreground text-sm hover:text-foreground underline md:no-underline">{company.text}</p>
+									</Link>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 			</section>
-			<hr className="my-8 mb-16" />
-			<section className="max-w-screen-2xl mx-auto px-6 mb-8">
-				<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{ProjectsData
-          .filter(project => project.released)
-          .slice()
-          .reverse()
-          .map((project, index) => (
-						<ProjectCard
-							key={project.id}
-							title={project.title}
-							href={`projects/${slugify(project.title)}`}
-							imageSrc={project.thumbnailSrc}
-							imageAlt={project.thumbnailAlt}
-							shortDescription={project.shortDescription}
-							Company={project.Company}
-              delay={index * 0.1}
-						/>
-					))}
-				</div>
-			</section>
-		</>
+			<hr className="my-8 animate-fly-up" />
+			<ProjectTabs MainProjectsData={MainProjectsData} MiniProjectsData={MiniProjectsData} />
+		</div>
 	)
 }

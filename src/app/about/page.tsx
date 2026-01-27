@@ -81,7 +81,7 @@ export default function About() {
 							<Image
 								className="rounded-xl drop-shadow-lg drop-shadow-foreground/50"
 								src="/project-images/ar4/warehouse.jpg"
-								alt="VEC Building"
+								alt="AR4 Robotic arm in warehouse"
 								width={400}
 								height={300}
 							/>
@@ -141,12 +141,12 @@ export default function About() {
 							<div>
 								<h3 className="mt-4 font-semibold">Intermediate</h3>
 								<ul className="mt-4 list-disc list-inside">
-									<li>JavaScript / TypeScript</li>
-									<li>Next.js</li>
+									<li>Next.js & TypeScript</li>
 									<li>Unity & C#</li>
 									<li>Godot & GDScript</li>
 									<li>Java</li>
 									<li>Linux</li>
+									<li>Davinci Resolve</li>
 								</ul>
 							</div>
 
@@ -156,6 +156,8 @@ export default function About() {
 									<li>SQL</li>
 									<li>Svelte</li>
 									<li>Docker</li>
+									<li>C++ & Micro-controllers</li>
+									<li>Blender</li>
 								</ul>
 							</div>
 
