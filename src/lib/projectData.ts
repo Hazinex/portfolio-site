@@ -274,19 +274,36 @@ export const MainProjectsData: ProjectType[] = [
   {
     id: 12,
     title: "ESP32 Climate Monitor",
-    thumbnailSrc: "",
-    thumbnailAlt: "",
+    thumbnailSrc: "/project-images/esp32-climate/finished-prototype.jpg",
+    thumbnailAlt: "The finished ESP32 climate monitor prototype, mounted on a cork board and battery powered.",
     shortDescription: "My experience learning microcontroller development and making an ESP32 room climate monitor",
     Company: "Personal",
     gallery: [
-      { src: "", alt: "" },
+      { src: "/project-images/esp32-climate/kit.jpg", alt: "ESP32 Development starter kit" },
+      { src: "/project-images/esp32-climate/helloworld.png", alt: "Code and terminal showing hello world program" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/esp32-climate/button.mp4", alt: "Button showing increase and decrease of voltage on monitor", type: "video", thumbnail: "/project-images/esp32-climate/button-test-thumb.png" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/esp32-climate/button-led.mp4", alt: "LED lighting up as a button is pressed", type: "video", thumbnail: "/project-images/esp32-climate/button-led-thumb.png" },
+      { src: "/project-images/esp32-climate/burnt-dht11.jpg", alt: "Burnt DHT11 sensor, melted plastic" },
+      { src: "/project-images/esp32-climate/temp-humidity-graph.png", alt: "Graph tracking temperature and humidity over time" },
+      { src: "/project-images/esp32-climate/first-oled.jpg", alt: "First OLED display working" },
+      { src: "/project-images/esp32-climate/oled-screen.jpg", alt: "OLED display showing hellow world and my website url" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/esp32-climate/tetris.mp4", alt: "Tetris played on a passive buzzer", type: "video", thumbnail: "/project-images/esp32-climate/tetris-thumb.png" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/esp32-climate/prox.mp4", alt: "Proximity sensor setting off an LED", type: "video", thumbnail: "/project-images/esp32-climate/prox-thumb.png" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/esp32-climate/potentiometer.mp4", alt: "Potentiometer controlling a buzzer's pitch", type: "video", thumbnail: "/project-images/esp32-climate/potentiometer-thumb.png" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/esp32-climate/display-test.mp4", alt: "Testing the E-Ink display", type: "video", thumbnail: "/project-images/esp32-climate/display-test-thumb.png" },
+      { src: "/project-images/esp32-climate/finished-screen.jpg", alt: "The screen of my finished ESP32 climate monitor" },
+      { src: "/project-images/esp32-climate/first-working.jpg", alt: "My first working ESP32 climate monitor, battery powered" },
+      { src: "/project-images/esp32-climate/finished-prototype.jpg", alt: "The prototype mounted to a cork board" },
     ],
     paragraphs: [
-      { number: 1, header: "", content: "" },
+      { number: 1, header: "Learning from the very beginning", content: "The only practical hardware experience I have a few small projects for a raspberry pi, building desktop PCs and the AR4 robotic arm, none of these really required much end-end development, typically one was already done for me. This time around I wanted full control of whatever I was doing. I settled on ESP32s as they seemed like the most fundamental I could go without soldering and PCB designing." },
+      { number: 2, header: "Project Idea", content: "I wanted to do some kind of hardware project as it was an area I had not tackled before. I always felt like I could make software, but without something physical it's hard to express to other, especially non-techy people, what I had accomplished. Hardware would also let me actualise on ideas I've had for home automation, and ultimately make me more 'well-rounded' as a developer. I set my sights on something that would be challenging that I would have no idea how to do, while still being something I would think is achievable, a simple climate monitor." },
+      { number: 3, header: "Getting Started", content: "I obviously couldn't jump straight into making the think without knowing what to do, I didn't even know what language I had to write code in, following some simple tutorials I made some simple demos with buttons, LEDs, motion sensors etc. which came part of an esp32 kit I bought. I used platform.io in VS Code to make my projects as I was already familiar with that when I used other languages. You'll notice the gallery this time has a lot more content in it as this is my first project after completing my website, so I was much more attentive in taking pictures and videos for my site. " },
+      { number: 4, header: "Building my project:", content: "After a while of learning, involving many broken wire and a burnt DHT11, and waiting for parts from Ali Express, I started taking on my initial challenge I set for myself. I had ordered some DHT22s (temperature and humidity sensors), more wires, 18650 battery-shield, and a 2.13-inch E-ink display. I wanted to go with an E-ink display here because I find them fascinating, being able to read a display that looks like paper feels like something lifted out of Harry Potter. My finished product had the following features: Current temperature & humidity, an ongoing daily average for the two, the current date, and an icon representing the outside weather (sun, cloud, rain, mist, snow, etc) that I determine using the OpenWeather API. In the future I also plan on adding a 'MQ9' gas sensor that will let me estimate carbon monoxide readings and 'combustible gasses. I thought this would be a good time to upload as I had achieved my original goal. You can also [check out this project on github](https://github.com/Hazinex/esp32-climate-monitor)." },
     ],
-    technologies: [],
-    released: false,
-    tags: []
+    technologies: ["Microcontrollers", "C++", "ESP32", "IoT"],
+    released: true,
+    tags: ["Microcontrollers", "C++", "IoT"]
   },
 ]
 
