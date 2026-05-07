@@ -274,7 +274,7 @@ export const MainProjectsData: ProjectType[] = [
   {
     id: 12,
     title: "ESP32 Climate Monitor",
-    thumbnailSrc: "/project-images/esp32-climate/finished-prototype.jpg",
+    thumbnailSrc: "/project-images/esp32-climate/prototype.jpg",
     thumbnailAlt: "The finished ESP32 climate monitor prototype, mounted on a cork board and battery powered.",
     shortDescription: "My experience learning microcontroller development and making an ESP32 room climate monitor",
     Company: "Personal",
@@ -305,6 +305,38 @@ export const MainProjectsData: ProjectType[] = [
     released: true,
     tags: ["Microcontrollers", "C++", "IoT"]
   },
+  {
+    id: 13,
+    title: "Unreal Engine 'Short-film'",
+    thumbnailSrc: "/project-images/unreal/Castle1.png",
+    thumbnailAlt: "Picture of a castle on a hill in a woodland setting, made in Unreal Engine.",
+    shortDescription: "Fulfilling a longtime goal of learning unreal engine, creating a 'short-film' in the process.",
+    Company: "Personal",
+    gallery: [
+      { src: "/project-images/unreal/first-lvl.png", alt: "The very first level I made in Unreal Engine, a house floating on a platform" },
+      { src: "/project-images/unreal/first-bp.png", alt: "Basic blueprint to open a door" },
+      { src: "/project-images/unreal/Castle1.png", alt: "A castle on a hill in a woodland setting, made in Unreal Engine" },
+      { src: "/project-images/unreal/Castle2.png", alt: "Another view of the castle, from a path in the woods" },
+      { src: "/project-images/unreal/interior-scaffolding.png", alt: "Interior of the castle, showing the starting of construction" },
+      { src: "/project-images/unreal/inside-complete.png", alt: "Completed interior of the castle, god rays coming through the roof" },
+      { src: "/project-images/unreal/interior_hall.png", alt: "Adding metahumans and cameras into the scene" },
+      { src: "/project-images/unreal/CastleExterior_PPV_Before.png", alt: "Exterior of the castle before post-processing" },
+      { src: "/project-images/unreal/CastleExterior_PPV_After.png", alt: "Exterior of the castle after post-processing" },
+      { src: "/project-images/unreal/getsuro-army.png", alt: "A group of Getsuro soldiers with his banner and insignia behind them" },
+      { src: "https://6qpihycmdikklyid.public.blob.vercel-storage.com/GetsuroHaruki%20-%20Final.mov", alt: "Haruki talking", type: "video", thumbnail: "/project-images/unreal/HarukiThumbnail.jpg" },
+    ],
+    paragraphs: [
+      { number: 1, header: "Unreal Engine", content: "Previously showcased on my website I’ve shown some of the work I’ve done in unity and Godot, learning unreal engine, in my mind, completes the trifecta of free widely used game engines. Unreal engine, while not the only one in use, is the favoured game engine at VEC, I sprung at the opportunity to give learning one of the most powerful 3D software’s available." },
+      { number: 2, header: "First Ever Level", content: "The first step I took to learning was just seeing what’s out there to get to grip with the engine. Thanks to my previous experience in other game engines, it wasn’t too difficult to navigate, there were some learning curves like the tiny default size of the outliner, and **everything** being called a ‘blueprint’. The first image in the gallery is the first level I made just getting to grips with basic modelling, the materials system, etc. Its not impressive by any means but it was a lot to learn in the just [1 hour long mini-YouTube course.](https://www.youtube.com/watch?v=LeY6tAP-qss)." },
+      { number: 3, header: "Unreal Sensei Castle", content: "Once I learned the basics, I wanted to make something that looked professional, something out of an animated film or video game. I followed [Unreal Sensei’s famous Unreal Engine 5 castle tutorial](https://www.youtube.com/watch?v=k-zMkzmduqI). It was quite a bit longer at 5 hours, but the time moves much faster when you know a bit more about what you’re doing and can see your creation coming to life and looking really professional. This course was mainly about environment creation focusing on the different tools, where to get assets, nanite, lumen, etc. I was super proud of the result and ended up putting the environment on the omni-directional treadmill VR setup at work for my colleagues to take a look at. Seeing my creation in VR really brought more depth and life to what I had created." },
+      { number: 4, header: "Bad Decisions Studio Ultimate Course", content: "So far, the courses I had followed had just been for learning, I had not yet created some kind of finished product like a game or animated film or any of the other industry learning things unreal engine is known for. After the previous course a colleague from work (Hi Craig :)) showed me a [course](https://learn.baddecisions.studio/) he had heard about from Bad Decisions studio. The course tasked me with creating a ‘short film’ of sorts with a feudal Japanese setting during a shogunate. This course was by far the biggest (20+ hours over 55 lessons) but went back to basics, luckily this meant I could quickly go through the beginning of the course. The course covered new topics such as Niagara Particles, Virtual Production Pipeline, Movie Render Queue, Animation, Metahumans, Cloth Simulation… The list is **long.**" },
+      { number: 5, header: "Final Product & Future", content: "The building and final product of the Bad Decisions course is in the gallery. I’m ecstatic with how it has turned out given my previously non-existent experience with unreal and virtual production. I look forward to using my newfound skills in work projects and more personal projects, hopefully some kind of playable game to level up my knowledge of blueprints." },
+    ],
+    technologies: ["Unreal Engine", "3D Modelling"],
+    released: true,
+    tags: ["Unreal Engine", "3D Modelling"]
+  },
+
 ]
 
 export const MiniProjectsData: ProjectType[] = [
